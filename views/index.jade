@@ -13,24 +13,90 @@ block body
 	include ./layout/_header   
 	//- content 
 	h1 Hello Jade 
+	
+	table.tablesaw(data-tablesaw-mode='swipe', data-tablesaw-minimap='')
+		thead
+			tr
+				th(scope='col', data-tablesaw-sortable-col, data-tablesaw-priority='persist') Movie Title
+				th(scope='col', data-tablesaw-sortable-col, data-tablesaw-sortable-default-col='', data-tablesaw-priority='3') Rank
+				th(scope='col', data-tablesaw-sortable-col, data-tablesaw-priority='2') Year
+				th(scope='col', data-tablesaw-sortable-col, data-tablesaw-priority='3')
+					abbr(title='Rotten Tomato Rating') Rating
+				th(scope='col', data-tablesaw-sortable-col, data-tablesaw-priority='4') Gross
+		tbody
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Avatar_(2009_film)') Avatar
+				td 1
+				td 2009
+				td 83%
+				td $2.7B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Titanic_(1997_film)') Titanic
+				td 2
+				td 1997
+				td 88%
+				td $2.1B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/The_Avengers_(2012_film)') The Avengers
+				td 3
+				td 2012
+				td 92%
+				td $1.5B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2') Harry Potter and the Deathly Hallows—Part 2
+				td 4
+				td 2011
+				td 96%
+				td $1.3B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Frozen_(2013_film)') Frozen
+				td 5
+				td 2013
+				td 89%
+				td $1.2B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Iron_Man_3') Iron Man 3
+				td 6
+				td 2013
+				td 78%
+				td $1.2B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Transformers:_Dark_of_the_Moon') Transformers: Dark of the Moon
+				td 7
+				td 2011
+				td 36%
+				td $1.1B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/The_Lord_of_the_Rings:_The_Return_of_the_King') The Lord of the Rings: The Return of the King
+				td 8
+				td 2003
+				td 95%
+				td $1.1B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Skyfall') Skyfall
+				td 9
+				td 2012
+				td 92%
+				td $1.1B
+			tr
+				td.title
+					a(href='http://en.wikipedia.org/wiki/Transformers:_Age_of_Extinction') Transformers: Age of Extinction
+				td 10
+				td 2014
+				td 18%
+				td $1.0B
 
-	ul
-		li 1
-		li 2
-		li 3
 
-	p 	Lorem ipsum dolor sit amet,
-		br/
-		| consectetur adipiscing elit.
-		br/
-		| Integer nec odio. Praesent libero. 
-		| Sed cursus ante dapibus diam. Sed nisi. 
-
-	ul
-		-for (var i = 2; i <= 12; i++)
-			-for (var j = 1; j <= 12; j++)
-				li #{i} x #{j} = #{i * j}
-	hr
+	
 
 	//- end content
 	include ./layout/_footer
