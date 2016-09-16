@@ -1,0 +1,26 @@
+ .tablesaw {
+     thead {
+         background-image: none;
+         background: #fff;
+     }
+
+ }
+ .tablesaw-swipe .tablesaw-cell-persist{
+     	box-shadow: none;
+     }
+ .tablesaw-columntoggle td.title a,
+ .tablesaw-swipe td.title a {
+     display: block;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+ 
+ .tablesaw-swipe td.title a {
+     max-width: 10em;
+     max-width: 40vw;
+ }
+
+.tablesaw-swipe .tablesaw-cell-persist:nth-child(1){
+    width: 60% !important;
+ }
