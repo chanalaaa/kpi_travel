@@ -1,0 +1,40 @@
+extends ./layout/_base
+
+block var
+	-var currentPage = "home"
+
+block title
+	title hi
+	
+block jsFirst
+	//- script here
+
+block body
+	include ./layout/_header   
+	//- content 
+	h1 Hello Jade 
+
+	ul
+		li 1
+		li 2
+		li 3
+
+	p 	Lorem ipsum dolor sit amet,
+		br/
+		| consectetur adipiscing elit.
+		br/
+		| Integer nec odio. Praesent libero. 
+		| Sed cursus ante dapibus diam. Sed nisi. 
+
+	ul
+		-for (var i = 2; i <= 12; i++)
+			-for (var j = 1; j <= 12; j++)
+				li #{i} x #{j} = #{i * j}
+	hr
+
+	//- end content
+	include ./layout/_footer
+
+
+block js
+	//- script here

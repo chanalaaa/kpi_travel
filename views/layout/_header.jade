@@ -1,0 +1,21 @@
+header
+	p i'm header
+
+//-
+	header
+	.navbar
+		nav
+			ul.navLogo
+				li.navbar-title
+					a(href="#"): img(src="images/logo.png", alt="")
+					button(role="button" onclick="openNavList()") =
+			ul.navList.collapse
+				li
+					//- a(href="#" class=currentPage === "we" ? 'active' : '') WE
+					a(href="./we.html" class={active: currentPage === 'we'}) WE
+				li
+					a(href="./work.html" class={active: currentPage === 'work'}) WOrK
+				li
+					a(href="./read.html" class={active: currentPage === 'read'}) ReAD
+				li
+					a(href="./contact.html" class={active: currentPage === 'contact'}) ContAct
