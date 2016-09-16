@@ -1,26 +1,35 @@
- .tablesaw {
-     thead {
-         background-image: none;
-         background: #fff;
-     }
+table,
+th,
+td {
+    border-collapse: collapse;
+}
 
- }
- .tablesaw-swipe .tablesaw-cell-persist{
-     	box-shadow: none;
-     }
- .tablesaw-columntoggle td.title a,
- .tablesaw-swipe td.title a {
-     display: block;
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
- }
- 
- .tablesaw-swipe td.title a {
-     max-width: 10em;
-     max-width: 40vw;
- }
+.tablesaw {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    table-layout: auto;
+    thead {
+        background-image: none;
+        background: #fff;
+    }
+}
 
-.tablesaw-swipe .tablesaw-cell-persist:nth-child(1){
-    width: 60% !important;
- }
+.tablesaw-swipe {
+    .tablesaw-cell-persist {
+        box-shadow: none;
+    }
+    td {
+        width: 25%;
+    }
+    td.title a {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 14em;
+        @media (max-width: 320px) {
+            max-width: 10em;
+        }
+    }
+}

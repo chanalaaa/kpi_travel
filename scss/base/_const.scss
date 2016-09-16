@@ -7,17 +7,18 @@ $lg: "screen and (min-width: 960px)";
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
-.clearfix:after { 
-  clear: both;
+.clearfix:after {
+    clear: both;
 }
 
 .clearfix {
-  *zoom: 1;
-} 
+    *zoom: 1;
+}
+
 @mixin bg_img($uri) {
     background-image: url($uri);
     @include background-size(cover);
@@ -28,3 +29,12 @@ $lg: "screen and (min-width: 960px)";
 }
 
 #wrapper {}
+
+.row {
+   margin: 0;
+}
+
+.-block_center {
+    margin: 0 auto;
+    float: none;
+}
