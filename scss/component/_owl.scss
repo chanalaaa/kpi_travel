@@ -1,38 +1,63 @@
-.owl-carousel {
-    .owl-item {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        &.active.center {
-            -webkit-filter: grayscale(0);
-            filter: grayscale(0);
+    .owl-carousel {
+        .owl-item {}
+        .item {
+            position: relative;
+            background: transparent;
         }
     }
-    .item {
-        position: relative;
-        background: transparent;
-    }
-}
-
-
-.customNavigation {
-    i {
-        cursor: pointer;
-        font-size: 3em;
-        &:hover {
-            color: red;
+    
+    .customNavigation {
+        i {
+            cursor: pointer;
+            font-size: 3em;
+            &:hover {
+                color: red;
+            }
+        }
+        .prev {
+            position: absolute;
+            left: 3%;
+            z-index: 2;
+            top: 0;
+        }
+        .next {
+            @extend .prev;
+            text-align: right;
+            margin-left: 40px;
+            left: auto;
+            right: 3%;
         }
     }
-    .prev {
+    
+    .owl-dots {
         position: absolute;
-        left: 15%;
-        z-index: 2;
-        top: 0;
-    }
-    .next {
-        @extend .prev;
-        text-align: right;
-        margin-left: 40px;
-        left: initial;
+        top: 7em;
         right: 15%;
     }
-}
+    
+    .owl-dots .owl-dot {
+        display: inline-block;
+        zoom: 1;
+    }
+    
+    .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        margin: 5px 7px;
+        background: #d6d6d6;
+        display: block;
+        -webkit-backface-visibility: visible;
+        -webkit-transition: opacity 200ms ease;
+        -moz-transition: opacity 200ms ease;
+        -ms-transition: opacity 200ms ease;
+        -o-transition: opacity 200ms ease;
+        transition: opacity 200ms ease;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+    }
+    
+    .owl-dots .owl-dot.active span,
+    .owl-dots .owl-dot:hover span {
+        background: #869791;
+    }

@@ -1,5 +1,53 @@
-.plan_block{
+.plan_block {
+    position: relative;
+    border: 1px solid #000;
+}
+
+.plan_block.swipe {
+    td {
+        vertical-align: middle;
+        &:first-child {
+            width: 70%;
+        }
+        &:not(:first-child) {
+            border-left: 1px solid #ddd;
+            padding: 15px 8px;
+        }
+    }
+    tbody {
+        padding: 15px;
+        margin-top: 25px;
+        &:before {
+            content: '';
+            display: block;
+            height: 20px;
+        }
+        tr {
+            &:first-child {
+                td {
+                    border-top: none;
+                }
+            }
+        }
+    }
+}
+
+.plan-table {
+    padding: 15px;
+    display: block;
+    width: 100%;
+}
+
+.plan-header {
 	position: relative;
-	padding: 15px;
-	border: 1px solid #000;
+    height: 9em;
+    background: #00BCD4;
+    display: table;
+    width:100%;
+    p {
+    	display: table-cell;
+    	vertical-align: middle;
+        color: #fff;
+        padding-left: 20%;
+    }
 }

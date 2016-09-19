@@ -14,27 +14,44 @@ block body
 	h1 Hello Jade 
 	.row
 		.col-sm-8.-block_center
-			.plan_block
-				.customNavigation
+			.plan_block.swipe
+				.customNavigation#customNav
 					i.prev.fa.fa-angle-left 
 					i.next.fa.fa-angle-right
 				.owl-carousel
 					.item
-						table.table
-								caption Monthly savings
-								tbody
-									tr
-										td Otto
-										td @mdo
-									tr
-										td Thornton
-										td @fat
-									tr
-										td the Bird
-										td @twitter
-
+						.plan-header
+							p Monthly savings
+							
+						.plan-table
+							table.table
+									//caption Monthly savings
+									tbody
+										tr
+											td Otto
+											td @mdo
+										tr
+											td Thornton
+											td @fat
+										tr
+											td the Bird
+											td @twitter					
 					.item
-						p 	dawawd2
+						.plan-header
+							p Monthly savings
+						.plan-table
+							table.table
+									//caption Monthly savings
+									tbody
+										tr
+											td Otto
+											td @mdo
+										tr
+											td Thornton
+											td @fat
+										tr
+											td the Bird
+											td @twitter
 
 
 
