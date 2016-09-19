@@ -1,3 +1,10 @@
+@mixin border_dot($direction) {
+    background-image: linear-gradient(to right, #ddd 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: $direction;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+}
+
 .plan_block {
     position: relative;
     border: 1px solid #000;
@@ -5,13 +12,22 @@
 
 .plan_block.swipe {
     td {
+        border-style: dotted;
+        border-width: 1px;
+        border-color: #ddd;
         vertical-align: middle;
         &:first-child {
-            width: 70%;
+            width: 75%;
+            border-left: none;
         }
         &:not(:first-child) {
             border-left: 1px solid #ddd;
             padding: 15px 8px;
+            text-align: center;
+            border-style: dotted;
+            border-width: 1px;
+            border-color: #ddd;
+            border-right: none;
         }
     }
     tbody {
@@ -28,6 +44,11 @@
                     border-top: none;
                 }
             }
+             &:last-child {
+                td {
+                    border-bottom: none;
+                }
+            }
         }
     }
 }
@@ -39,14 +60,14 @@
 }
 
 .plan-header {
-	position: relative;
+    position: relative;
     height: 9em;
     background: #00BCD4;
     display: table;
-    width:100%;
+    width: 100%;
     p {
-    	display: table-cell;
-    	vertical-align: middle;
+        display: table-cell;
+        vertical-align: middle;
         color: #fff;
         padding-left: 20%;
     }
