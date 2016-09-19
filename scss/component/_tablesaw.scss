@@ -12,15 +12,27 @@ td {
     thead {
         background-image: none;
         background: #fff;
+        border: none;
+        tr:first-child th{
+            border:none;
+        }
+    }
+    caption {
+        display: table-caption;
+        text-align: center;
     }
 }
 
 .tablesaw-swipe {
     .tablesaw-cell-persist {
         box-shadow: none;
+        border-right: none;
     }
     td {
         width: 25%;
+        &:not(:first-child){
+            text-align: right;
+        }
     }
     td.title a {
         display: block;
@@ -31,5 +43,11 @@ td {
         @media (max-width: 320px) {
             max-width: 10em;
         }
+    }
+}
+
+.tablesaw-advance-dots li {
+    &:first-child {
+        display: none;
     }
 }
