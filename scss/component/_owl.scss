@@ -1,0 +1,38 @@
+.owl-carousel {
+    .owl-item {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        &.active.center {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+        }
+    }
+    .item {
+        position: relative;
+        background: transparent;
+    }
+}
+
+
+.customNavigation {
+    i {
+        cursor: pointer;
+        font-size: 3em;
+        &:hover {
+            color: red;
+        }
+    }
+    .prev {
+        position: absolute;
+        left: 15%;
+        z-index: 2;
+        top: 0;
+    }
+    .next {
+        @extend .prev;
+        text-align: right;
+        margin-left: 40px;
+        left: initial;
+        right: 15%;
+    }
+}

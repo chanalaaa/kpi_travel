@@ -1,58 +1,35 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
-
-    var itemTable = 1;
-    var $table = $(".tablesaw-swipe");
-    var lenTable = $(".tablesaw-advance-dots li").length;
-    $prevBtn = $(".btn-micro.left");
-    $nextBtn = $(".btn-micro.right");
-
-    $prevBtn.on("click", function(e) {
-        if (itemTable === 1 || itemTable < 1) {
-            return;
-        } else {
-            itemTable -= 1;
-            prevTable(itemTable);
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
         }
-        e.preventDefault();
-    });
+    })
 
-    $nextBtn.on("click", function(e) {
-        console.log(itemTable);
-        if (itemTable === lenTable || itemTable > lenTable) {
-            return;
-        } else {
-            itemTable += 1;
-            nextTable(itemTable);
-        }
-        e.preventDefault();
-    });
-
-    $table
-        .on("tablesawcolumns.swipetoggle", function() {
-            var canGoPrev = nextTable(itemTable + 1);
-            var canGoNext = prevTable(itemTable);
-        })
-        .on("tablesawnext.swipetoggle", function() {
-        	alert("fe");
-            itemTable += 1;
-        })
-        .on("tablesawprev.swipetoggle", function() {
-            itemTable -= 1;
+    $(".owl-carousel").each(function() {
+        var $this = $(this);
+        // Custom Navigation Events
+        $this.parent().find(".next").click(function() {
+            $this.trigger('next.owl.carousel');
         });
+        $this.parent().find(".prev").click(function() {
+            $this.trigger('prev.owl.carousel');
+        });
+    });
 
 
-    function getCoord(event, key) {
-        return (event.touches || event.originalEvent.touches)[0][key];
-    }
-
-    function nextTable(itemTable) {
-        document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
-    }
-
-    function prevTable(itemTable) {
-        document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
-    }
+   
 
 
 });
@@ -63,3 +40,67 @@ function openNavList() {
     navList.classList.toggle('collapse');
 }
 */
+
+
+
+
+
+
+
+
+
+
+
+
+ // var itemTable = 1;
+    // var $table = $(".tablesaw-swipe");
+    // var lenTable = $(".tablesaw-advance-dots li").length;
+    // $prevBtn = $(".btn-micro.left");
+    // $nextBtn = $(".btn-micro.right");
+
+    // $prevBtn.on("click", function(e) {
+    //     if (itemTable === 1 || itemTable < 1) {
+    //         return;
+    //     } else {
+    //         itemTable -= 1;
+    //         prevTable(itemTable);
+    //     }
+    //     e.preventDefault();
+    // });
+
+    // $nextBtn.on("click", function(e) {
+    //     console.log(itemTable);
+    //     if (itemTable === lenTable || itemTable > lenTable) {
+    //         return;
+    //     } else {
+    //         itemTable += 1;
+    //         nextTable(itemTable);
+    //     }
+    //     e.preventDefault();
+    // });
+
+    // $table
+    //     .on("tablesawcolumns.swipetoggle", function() {
+    //         var canGoPrev = nextTable(itemTable + 1);
+    //         var canGoNext = prevTable(itemTable);
+    //     })
+    //     .on("tablesawnext.swipetoggle", function() {
+    //         alert("fe");
+    //         itemTable += 1;
+    //     })
+    //     .on("tablesawprev.swipetoggle", function() {
+    //         itemTable -= 1;
+    //     });
+
+
+    // function getCoord(event, key) {
+    //     return (event.touches || event.originalEvent.touches)[0][key];
+    // }
+
+    // function nextTable(itemTable) {
+    //     document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
+    // }
+
+    // function prevTable(itemTable) {
+    //     document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
+    // }

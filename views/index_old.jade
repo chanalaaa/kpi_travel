@@ -1,0 +1,87 @@
+extends ./layout/_base
+
+block var
+	-var currentPage = "home"
+
+block title
+	title hi
+	
+block jsFirst
+
+block body
+	include ./layout/_header   
+	//- content 
+	h1 Hello Jade 
+	.row
+		.col-sm-8.-block_center
+			table.tablesaw.tablesaw-swipe(data-tablesaw-mode='swipe', data-tablesaw-minimap='')
+				caption#captionTitle A complex table
+				thead
+					tr
+						th.title(scope='col', data-tablesaw-sortable-col='', data-tablesaw-priority='persist')
+						th(scope='col', data-tablesaw-sortable-col='', data-tablesaw-sortable-default-col='', data-tablesaw-priority='3') 
+						th(scope='col', data-tablesaw-sortable-col='', data-tablesaw-priority='2') 
+						th(scope='col', data-tablesaw-sortable-col='', data-tablesaw-priority='1') 
+						th(scope='col', data-tablesaw-sortable-col='', data-tablesaw-priority='4') 
+				tbody
+					tr
+						td.title
+							a(href='#') Avatar
+						td 1
+						td 2009
+						td 83%
+						td $2.7B
+					tr
+						td.title
+							a(href='#') Titanic
+						td 2
+						td 1997
+						td 88%
+						td $2.1B
+					tr
+						td.title
+							a(href='#') The Avengers
+						td 3
+						td 2012
+						td 92%
+						td $1.5B
+					tr
+						td.title
+							a(href='#') Harry Potter and the Deathly Hallows—Part 2
+						td 4
+						td 2011
+						td 96%
+						td $1.3B
+					tr
+						td.title
+							a(href='#') Frozen
+						td 5
+						td 2013
+						td 89%
+						td $1.2B
+					tr
+						td.title
+							a(href='#') Iron Man 3
+						td 6
+						td 2013
+						td 78%
+						td $1.2B
+					tr
+						td.title
+							a(href='#') Transformers: Dark of the Moon
+						td 7
+						td 2011
+						td 36%
+						td $1.1B
+
+
+
+
+	
+
+	//- end content
+	include ./layout/_footer
+
+
+block js
+	//-script here

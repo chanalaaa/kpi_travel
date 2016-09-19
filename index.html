@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hi</title>
-    <script type="text/javascript" src="js/vendors/jquery_v2.1.4.min.js?v=1001"></script>
-    <script type="text/javascript" src="js/vendors/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/vendors/tablesaw.min.js"></script>
-    <script type="text/javascript" src="js/vendors/tablesaw-init.min.js"></script>
+    <script type="text/javascript" src="./js/vendors/jquery_v2.1.4.min.js?v=1001"></script>
+    <script type="text/javascript" src="./js/vendors/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/vendors/tablesaw.min.js"></script>
+    <script type="text/javascript" src="./js/vendors/tablesaw-init.min.js"></script>
     <link rel="stylesheet" href="./css/vendors/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/vendors/font-awesome.min.css">
     <link rel="stylesheet" href="./css/vendors/tablesaw.min.css">
+    <link rel="stylesheet" href="./css/vendors/owl.carousel.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
@@ -23,76 +24,41 @@
       <h1>Hello Jade </h1>
       <div class="row">
         <div class="col-sm-8 -block_center">
-          <table data-tablesaw-mode="swipe" data-tablesaw-minimap="" class="tablesaw tablesaw-swipe">
-            <caption id="captionTitle">A complex table</caption>
-            <thead>
-              <tr>
-                <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="persist" class="title"></th>
-                <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="" data-tablesaw-priority="3"> </th>
-                <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="2"> </th>
-                <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="1"> </th>
-                <th scope="col" data-tablesaw-sortable-col="" data-tablesaw-priority="4"> </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title"><a href="#">Avatar</a></td>
-                <td>1</td>
-                <td>2009</td>
-                <td>83%</td>
-                <td>$2.7B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">Titanic</a></td>
-                <td>2</td>
-                <td>1997</td>
-                <td>88%</td>
-                <td>$2.1B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">The Avengers</a></td>
-                <td>3</td>
-                <td>2012</td>
-                <td>92%</td>
-                <td>$1.5B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">Harry Potter and the Deathly Hallows—Part 2</a></td>
-                <td>4</td>
-                <td>2011</td>
-                <td>96%</td>
-                <td>$1.3B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">Frozen</a></td>
-                <td>5</td>
-                <td>2013</td>
-                <td>89%</td>
-                <td>$1.2B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">Iron Man 3</a></td>
-                <td>6</td>
-                <td>2013</td>
-                <td>78%</td>
-                <td>$1.2B</td>
-              </tr>
-              <tr>
-                <td class="title"><a href="#">Transformers: Dark of the Moon</a></td>
-                <td>7</td>
-                <td>2011</td>
-                <td>36%</td>
-                <td>$1.1B</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="plan_block">
+            <div class="customNavigation"><i class="prev fa fa-angle-left"> </i><i class="next fa fa-angle-right"></i></div>
+            <div class="owl-carousel">
+              <div class="item">
+                <table class="table">
+                  <caption>Monthly savings</caption>
+                  <tbody>
+                    <tr>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="item">
+                <p> dawawd2</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <footer>
         <p>but i'm footer</p>
       </footer>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/vendors/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 
 </html>
