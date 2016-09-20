@@ -1,0 +1,11 @@
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    .navbar-toggle {
+        border: none;
+        &:focus,
+        &:hover {
+            background: transparent;
+        }
+    }
+}
