@@ -87,15 +87,20 @@
         text-align: left;
     }
  .caret {
-     float: right;
+
      border-top: none;
-     margin-top: 0px;
+
      &:before {
      	font-family: 'fontAwesome';
          content: "\f107";
          font-size: 16px;
-         margin: 0px -8px;
+
      }
+ }
+
+ .bootstrap-select.btn-group .dropdown-toggle .caret{
+ 	   margin-top: -10px;
+ 	   margin-right: 5px;
  }
  
  // End Content //////////////////////////////////
