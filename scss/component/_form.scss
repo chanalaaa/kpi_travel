@@ -1,0 +1,57 @@
+// dropdown
+button.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+}
+
+.caret {
+    border-top: none;
+       margin-top: -10px;
+    margin-right: 5px;
+    &:before {
+        font-family: 'fontAwesome';
+        content: "\f107";
+        font-size: 16px;
+    }
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin-top: -10px;
+    margin-right: 5px;
+}
+
+// input
+.form-inline {
+    padding: 2em 0;
+    &.form-group {
+        & > div.col-xs-8 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .form-control {
+        width: 100%;
+    }
+    label {
+        line-height: 34px;
+    }
+}
+
+// datepick
+.datepick {
+    position: relative;
+    i {
+        position: absolute;
+        font-style: normal;
+        bottom: 5px;
+        right: 9px;
+        cursor: pointer;
+        color: #CBCBCB;
+        font-size: 18px;
+        &:before {
+            font-family: 'fontAwesome';
+            content: "\f073";
+            font-size: 16px;
+        }
+    }
+}

@@ -24,9 +24,32 @@ jQuery(document).ready(function($) {
     $(".dropdown-menu").on('click', 'li', function() {
         $(this).parents('.dropdown').find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
     });
+
     $('.selectpicker').selectpicker({
         size: 4
     });
+
+    /* datepicker */
+    $('input[name="startdate"],input[name="enddate"]').daterangepicker({
+        locale: {
+            format: 'DD/MM/YYYY'
+        },
+        singleDatePicker: true,
+        showDropdowns: false,
+        opens: 'left',
+
+        //autoUpdateInput: false,
+    });
+    $(".ico_datestart").on("click", function() {
+        $('input[name="startdate"]').trigger("click");
+    })
+    $(".ico_dateend").on("click", function() {
+        $('input[name="enddate"]').trigger("click");
+    })
+
+
+
+
 });
 
 

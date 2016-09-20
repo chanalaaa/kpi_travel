@@ -67,40 +67,7 @@
      padding: 2em 15px;
  }
  
- .form-inline {
-     padding: 2em 0;
-     &.form-group {
-         & > div.col-xs-8 {
-             padding-left: 0;
-             padding-right: 0;
-         }
-     }
-     .form-control {
-         width: 100%;
-     }
-     label {
-         line-height: 34px;
-     }
- }
-   button.dropdown-toggle {
-        width: 100%;
-        text-align: left;
-    }
- .caret {
+ 
 
-     border-top: none;
-
-     &:before {
-     	font-family: 'fontAwesome';
-         content: "\f107";
-         font-size: 16px;
-
-     }
- }
-
- .bootstrap-select.btn-group .dropdown-toggle .caret{
- 	   margin-top: -10px;
- 	   margin-right: 5px;
- }
  
  // End Content //////////////////////////////////
