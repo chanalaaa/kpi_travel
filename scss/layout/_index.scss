@@ -1,5 +1,62 @@
  // Content //////////////////////////////////
-
+ .block_elements {
+     background: #fff;
+     border-radius: 4px;
+     overflow: hidden;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ }
  
+ .plan_block,
+ .step1_block {
+     position: relative;
+     font-size: 14px;
+     font-size: 1.4rem;
+     padding: 3em 0;
+     z-index: 0;
+ }
+ 
+ .step-title {
+     font-size: 1.8em;
+     text-align: center;
+ }
+ 
+ ul.step-nav {
+     li {
+         width: 2em;
+         height: 2em;
+         text-align: center;
+         line-height: 2em;
+         border-radius: 1em;
+         background: dodgerblue;
+         margin: 0 1em;
+         display: inline-block;
+         color: white;
+         position: relative;
+         &:before {
+             content: '';
+             position: absolute;
+             top: .9em;
+             left: -4em;
+             width: 4em;
+             height: .2em;
+             background: dodgerblue;
+             z-index: -1;
+         }
+         &:first-child {
+             &:before {
+                 display: none;
+             }
+         }
+         &.active {
+             background: dodgerblue;
+         }
+         &.active ~ li {
+             background: dodgerblue;
+         }
+         &.active ~ li::before {
+             background: dodgerblue;
+         }
+     }
+ }
  
  // End Content //////////////////////////////////

@@ -5,6 +5,15 @@ $md: "screen and (min-width: 780px)";
 $lg: "screen and (min-width: 960px)";
 */
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -21,23 +30,22 @@ $lg: "screen and (min-width: 960px)";
 
 @mixin bg_img($uri) {
     background-image: url($uri);
-   background-size: cover;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
 }
 
-#wrapper {}
+#wrapper {
+    @include bg_img("../images/bg01.jpg");
+    min-height: 20rem;
+}
 
 .row {
-   margin: 0;
+    margin: 0;
 }
 
 .-block_center {
     margin: 0 auto;
     float: none;
-}
-
-body{
-    @include bg_img("../images/bg01.jpg");
 }
