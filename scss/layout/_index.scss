@@ -52,18 +52,50 @@
      }
  }
  
-.radio label::after {
+ .radio label::after {
      background-color: #555555;
  }
-
- .radioForm{
- 	text-align: center;
- 	.radio.radio-inline{
- 		padding: 0 20px;
- 	}
+ 
+ .radioForm {
+     text-align: center;
+     .radio.radio-inline {
+         padding: 0 20px;
+     }
  }
  
- .tab-content{
- 	padding: 2em 15px;
+ .tab-content {
+     padding: 2em 15px;
  }
+ 
+ .form-inline {
+     padding: 2em 0;
+     &.form-group {
+         & > div.col-xs-8 {
+             padding-left: 0;
+             padding-right: 0;
+         }
+     }
+     .form-control {
+         width: 100%;
+     }
+     label {
+         line-height: 34px;
+     }
+ }
+   button.dropdown-toggle {
+        width: 100%;
+        text-align: left;
+    }
+ .caret {
+     float: right;
+     border-top: none;
+     margin-top: 0px;
+     &:before {
+     	font-family: 'fontAwesome';
+         content: "\f107";
+         font-size: 16px;
+         margin: 0px -8px;
+     }
+ }
+ 
  // End Content //////////////////////////////////

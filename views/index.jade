@@ -46,6 +46,26 @@ block body
 										input#radioYear(type='radio', name='trip', value='year')
 										label(for='radioYear')
 											| รายปี
+								.form-inline
+									label.col-xs-3(for='usr') Name:
+									.form-group.col-sm-9.col-xs-12
+											input#usr.form-control(type='text')
+								.form-inline
+									label.col-xs-3(for='usr') Name:
+									.form-group.col-sm-9.col-xs-12
+										.dropdown
+											button#dropdownMenu1.btn.btn-default.dropdown-toggle.-fullwidth(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+												| test01
+												span.caret
+											ul.dropdown-menu.-fullwidth(aria-labelledby='dropdownMenu1')
+												li
+													a(href='#') test01
+												li
+													a(href='#') test02
+												li
+													a(href='#') test03
+
+
 
 							.tab-pane#sec_out
 								p We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab
