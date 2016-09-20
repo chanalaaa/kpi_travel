@@ -1,0 +1,50 @@
+.step-connect_nav ul{
+     text-align: center;
+     li {
+         display: inline-block;
+         position: relative;
+         text-align: center;
+         padding: 1px;
+         box-sizing: border-box;
+         .circle {
+             position: relative;
+             width: 1.7em;
+             height: 1.7em;
+             text-align: center;
+             line-height: 1.7em;
+             border-radius: 1em;
+             background: dodgerblue;
+             margin: 0 1.5em;
+             color: white;
+             &:before {
+                 content: '';
+                 position: absolute;
+                 top: .9em;
+                 left: -4em;
+                 width: 4em;
+                 height: .2em;
+                 z-index: -1;
+                 @extend .var_dots;
+             }
+         }
+         &:first-child {
+             .circle:before {
+                 display: none;
+             }
+         }
+         &.active {
+             .circle {
+                 background: dodgerblue;
+                 width: 2em;
+                 height: 2em;
+                 line-height: 2em;
+             }
+         }
+         &.active ~ li {
+             .circle {
+                 background: lightblue;
+             }
+         }
+         &.active ~ .circle::before {}
+     }
+ }

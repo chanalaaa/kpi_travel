@@ -10,6 +10,7 @@
     <script type="text/javascript" src="./js/vendors/tablesaw.min.js"></script>
     <script type="text/javascript" src="./js/vendors/tablesaw-init.min.js"></script>
     <link rel="stylesheet" href="./css/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/vendors/bootstrap/aws_checkbox.min.css">
     <link rel="stylesheet" href="./css/vendors/font-awesome.min.css">
     <link rel="stylesheet" href="./css/vendors/tablesaw.min.css">
     <link rel="stylesheet" href="./css/vendors/owl.carousel.css">
@@ -39,24 +40,45 @@
         <div class="col-sm-8 -block_center">
           <div class="step1_block block_elements">
             <p class="step-title">ประกันภัยเดินทาง</p>
-            <ul class="step-nav">
-              <li class="active">
-                <div class="circle">1</div>
-                <p>test01</p>
-              </li>
-              <li>
-                <div class="circle">2</div>
-                <p>test02</p>
-              </li>
-              <li>
-                <div class="circle">3</div>
-                <p>test03</p>
-              </li>
-              <li>
-                <div class="circle">4</div>
-                <p>test04</p>
-              </li>
-            </ul>
+            <div class="step-connect_nav">
+              <ul class="step-nav">
+                <li class="active">
+                  <div class="circle">1</div>
+                  <p>test01</p>
+                </li>
+                <li>
+                  <div class="circle">2</div>
+                  <p>test02</p>
+                </li>
+                <li>
+                  <div class="circle">3</div>
+                  <p>test03</p>
+                </li>
+                <li>
+                  <div class="circle">4</div>
+                  <p>test04</p>
+                </li>
+              </ul>
+            </div>
+            <div class="step-tab">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#sec_in" data-toggle="tab">IN</a></li>
+                <li><a href="#sec_out" data-toggle="tab">OUT</a></li>
+              </ul>
+              <div class="row">
+                <div class="tab-content clearfix col-sm-8 -block_center">
+                  <div id="sec_in" class="tab-pane active">
+                    <form role="form" class="radioForm">
+                      <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
+                      <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
+                    </form>
+                  </div>
+                  <div id="sec_out" class="tab-pane">
+                    <p>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -5,6 +5,10 @@ $md: "screen and (min-width: 780px)";
 $lg: "screen and (min-width: 960px)";
 */
 
+html,body{
+    height: 100%;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -38,7 +42,7 @@ body {
 
 #wrapper {
     @include bg_img("../images/bg01.jpg");
-    min-height: 20rem;
+    min-height: 100%;
 }
 
 .row {

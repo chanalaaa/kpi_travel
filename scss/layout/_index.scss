@@ -20,55 +20,50 @@
      text-align: center;
  }
  
- ul.step-nav {
-     text-align: center;
+ .step-tab {
+     padding: 2em 0;
+ }
+ 
+ .nav-tabs {
+     border: none;
      li {
-         display: inline-block;
-         position: relative;
+         width: 50%;
+         border: none;
+         background-color: #eee;
          text-align: center;
-         padding: 1px;
-         box-sizing: border-box;
-         .circle {
-             position: relative;
-             width: 1.7em;
-             height: 1.7em;
-             text-align: center;
-             line-height: 1.7em;
-             border-radius: 1em;
-             background: dodgerblue;
-             margin: 0 1em;
-             color: white;
-             &:before {
-                 content: '';
-                 position: absolute;
-                 top: .9em;
-                 left: -4em;
-                 width: 4em;
-                 height: .2em;
-                 z-index: -1;
-                 @extend .var_dots;
+         &.active a {
+             background-color: lightblue;
+             border: none;
+             border-radius: 0;
+             &:hover,
+             &:focus {
+                 background-color: lightblue !important;
+                 border: 0;
              }
          }
-         &:first-child {
-             .circle:before {
-                 display: none;
+         a {
+             border: none;
+             border-radius: 0;
+             margin: 0;
+             &:hover {
+                 background-color: lightblue;
              }
          }
-         &.active {
-             .circle {
-                 background: dodgerblue;
-                 width: 2em;
-                 height: 2em;
-                 line-height: 2em;
-             }
-         }
-         &.active ~ li {
-             .circle {
-                 background: lightblue;
-             }
-         }
-         &.active ~ .circle::before {}
      }
  }
  
+.radio label::after {
+     background-color: #555555;
+ }
+
+ .radioForm{
+ 	text-align: center;
+ 	.radio.radio-inline{
+ 		padding: 0 20px;
+ 	}
+ }
+ 
+ .tab-content{
+ 	padding: 2em 15px;
+ }
  // End Content //////////////////////////////////

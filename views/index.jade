@@ -15,19 +15,40 @@ block body
 		.col-sm-8.-block_center
 			.step1_block.block_elements
 				p.step-title ประกันภัยเดินทาง
-				ul.step-nav
-					li.active 
-						.circle 1
-						p test01
-					li 
-						.circle 2
-						p test02
-					li
-						.circle 3
-						p test03
-					li
-						.circle 4
-						p test04
+				.step-connect_nav
+					ul.step-nav
+						li.active 
+							.circle 1
+							p test01
+						li 
+							.circle 2
+							p test02
+						li
+							.circle 3
+							p test03
+						li
+							.circle 4
+							p test04
+
+				.step-tab
+					ul.nav.nav-tabs
+						li.active: a(href='#sec_in', data-toggle='tab') IN
+						li: a(href='#sec_out', data-toggle='tab') OUT
+					.row
+						.tab-content.clearfix.col-sm-8.-block_center
+							.tab-pane.active#sec_in
+								form.radioForm(role='form')
+									.radio.radio-inline
+										input#radioRound(type='radio', name='trip', value='round',checked='')
+										label(for='radioRound')
+											| รายเที่ยว
+									.radio.radio-inline
+										input#radioYear(type='radio', name='trip', value='year')
+										label(for='radioYear')
+											| รายปี
+
+							.tab-pane#sec_out
+								p We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab
 
 				
 
