@@ -21,41 +21,53 @@
  }
  
  ul.step-nav {
+     text-align: center;
      li {
-         width: 2em;
-         height: 2em;
-         text-align: center;
-         line-height: 2em;
-         border-radius: 1em;
-         background: dodgerblue;
-         margin: 0 1em;
          display: inline-block;
-         color: white;
          position: relative;
-         &:before {
-             content: '';
-             position: absolute;
-             top: .9em;
-             left: -4em;
-             width: 4em;
-             height: .2em;
+         text-align: center;
+         padding: 1px;
+         box-sizing: border-box;
+         .circle {
+             position: relative;
+             width: 1.7em;
+             height: 1.7em;
+             text-align: center;
+             line-height: 1.7em;
+             border-radius: 1em;
              background: dodgerblue;
-             z-index: -1;
+             margin: 0 1em;
+             color: white;
+             &:before {
+                 content: '';
+                 position: absolute;
+                 top: .9em;
+                 left: -4em;
+                 width: 4em;
+                 height: .2em;
+                 z-index: -1;
+                 @extend .var_dots;
+             }
          }
          &:first-child {
-             &:before {
+             .circle:before {
                  display: none;
              }
          }
          &.active {
-             background: dodgerblue;
+             .circle {
+                 background: dodgerblue;
+                 width: 2em;
+                 height: 2em;
+                 line-height: 2em;
+             }
          }
          &.active ~ li {
-             background: dodgerblue;
+             .circle {
+                 background: lightblue;
+             }
          }
-         &.active ~ li::before {
-             background: dodgerblue;
-         }
+         &.active ~ .circle::before {}
      }
  }
  

@@ -49,3 +49,10 @@ body {
     margin: 0 auto;
     float: none;
 }
+
+.var_dots {
+    background-image: linear-gradient(to right, #cbcbcb 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 4px 2px;
+    background-repeat: repeat-x;
+}
