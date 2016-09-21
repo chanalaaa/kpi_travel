@@ -1,10 +1,7 @@
-/*
 $sm: "screen and (min-width: 375px)";
-$md-600: "screen and (min-width: 600px)";
-$md: "screen and (min-width: 780px)";
-$lg: "screen and (min-width: 960px)";
-*/
-
+$md-500: "screen and (min-width: 500px)";
+$md: "screen and (min-width: 768px)";
+$lg: "screen and (min-width: 992px)";
 html,
 body {
     height: 100%;
@@ -44,8 +41,13 @@ body {
 }
 
 #wrapper {
-    @include bg_img("../images/bg01.jpg");
+    @include bg_img("../images/bgxs01.jpg");
+    background-position: 85% 100% !important;
     min-height: 100%;
+    @media #{$md} {
+        @include bg_img("../images/bg01.jpg");
+        background-position: 25% 100% !important;
+    }
 }
 
 .row {
