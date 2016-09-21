@@ -5,6 +5,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+
     @media #{$md} {
         width: 80%;
     }
@@ -103,5 +104,8 @@
     width: 76%;
     position: absolute;
     top: 11px;
+    right: 0;
+    left: 0;
     height: 2px;
+    margin: 0 auto;
 }
