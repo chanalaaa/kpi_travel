@@ -41,12 +41,27 @@ body {
 }
 
 #wrapper {
-    @include bg_img("../images/bgxs01.jpg");
-    background-position: 85% 100% !important;
+    position: relative;
+}
+
+.bgPage {
+    position: absolute;
     min-height: 100%;
-    @media #{$md} {
-        @include bg_img("../images/bg01.jpg");
-        background-position: 25% 100% !important;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+    &.home {
+        @include bg_img("../images/bgxs01.jpg");
+        background-position: 85% 100% !important;
+        min-height: 100%;
+        @media #{$md} {
+            @include bg_img("../images/bg01.jpg");
+            background-position: 40% 100% !important;
+        }
     }
 }
 

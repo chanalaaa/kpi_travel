@@ -33,21 +33,27 @@
          background-color: #eee;
          text-align: center;
          &.active a {
-             background-color: lightblue;
+             background-color: $mainblue;
              border: none;
              border-radius: 0;
+             color: #fff;
              &:hover,
              &:focus {
-                 background-color: lightblue !important;
+                 background-color: $mainblue !important;
                  border: 0;
+                 color: #fff;
              }
          }
          a {
+             font-family: kanda_b;
+             color: $darkgray;
+             font-size: 2.5em;
+             line-height: 1.2em;
              border: none;
              border-radius: 0;
              margin: 0;
              &:hover {
-                 background-color: lightblue;
+                 background-color: $lightblue;
              }
          }
      }
@@ -68,5 +74,4 @@
      padding: 2em 15px;
  }
  
-
  // End Content //////////////////////////////////
