@@ -74,34 +74,25 @@
               <div class="row">
                 <div class="tab-content clearfix col-sm-10 col-md-9 -block_center">
                   <div id="sec_in" class="tab-pane active">
-                    <form role="form" class="radioForm">
-                      <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
-                      <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
-                    </form>
-                    <div class="form-inline"><label for="usr" class="col-sm-4 col-xs-5">Name:</label>
-                      <div class="form-group col-sm-8 col-xs-12"><input id="usr" type="text" class="form-control"></div>
-                    </div>
-                    <div class="form-inline"><label class="col-sm-4 col-xs-5">ไปยังประเทศ</label>
-                      <div class="form-group col-sm-8 col-xs-12"><select class="selectpicker -fullwidth"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
-                    </div>
-                    <div class="form-inline"><label class="col-sm-4 col-xs-5">เดินทางไป</label>
-                      <div class="form-group col-sm-8 col-xs-12">
+                    <form>
+                      <div role="form" class="radioForm">
+                        <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
+                        <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
+                      </div>
+                      <div class="form-group inline_field"><label for="usr">Name:</label><input id="usr" type="text" class="form-control"></div>
+                      <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
+                      <div class="form-group inline_field"><label>เดินทางไป</label>
                         <div class="datepick"><input type="text" name="startdate" class="form-control"><i class="ico_datestart"></i></div>
                       </div>
-                    </div>
-                    <div class="form-inline"><label class="col-sm-4 col-xs-5">เดินทางกลับ</label>
-                      <div class="form-group col-sm-8 col-xs-12">
+                      <div class="form-group inline_field"><label>เดินทางกลับ</label>
                         <div class="datepick"><input type="text" name="enddate" class="form-control"><i class="ico_dateend"></i></div>
                       </div>
-                    </div>
-                    <div class="form-inline text-resultDate"><label class="col-sm-4 col-xs-5">จำนวนวันเดินทาง</label>
-                      <div class="col-xs-3">
+                      <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
                         <p>10</p>
                       </div>
-                    </div>
-                    <div class="form-inline material">
-                      <div class="group col-sm-8 col-xs-12"><input type="text" required><label>ไปยังประเทศ</label></div>
-                    </div>
+                      <div class="form-group inline_field material">
+                        <div class="group"><input type="text" required><label>ไปยังประเทศ</label></div>
+                      </div><button type="submit" class="btn btn-primary -center">Primary</button></form>
                   </div>
                   <div id="sec_out" class="tab-pane">
                     <p>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</p>
