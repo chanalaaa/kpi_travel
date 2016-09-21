@@ -119,6 +119,7 @@ label {
             transition: 0.2s ease all;
             -moz-transition: 0.2s ease all;
             -webkit-transition: 0.2s ease all;
+            width: 100%;
         }
     }
     .selectpicker {
@@ -137,10 +138,19 @@ label {
     }
 }
 
-.btn_field {
-    width: 100%;
-    text-align: center;
-    display: block;
+
+
+.btn-primary {
+    margin: 3em auto;
+    font-family: 'kanda_b';
+    border: none;
+    font-size: 2em;
+    padding: 0px 50px;
+    background: rgba(65, 193, 240, 1);
+    background: linear-gradient(to right, rgba(65, 193, 240, 1) 0%, rgba(128, 220, 238, 1) 100%);
+    &:hover{
+        opacity: .7;
+    }
 }
 
 // datepick
