@@ -5,7 +5,8 @@ $md: "screen and (min-width: 780px)";
 $lg: "screen and (min-width: 960px)";
 */
 
-html,body{
+html,
+body {
     height: 100%;
 }
 
@@ -16,6 +17,9 @@ html {
 body {
     font-size: 14px;
     font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
 }
 
 .clearfix:before,
@@ -61,6 +65,20 @@ body {
     background-repeat: repeat-x;
 }
 
-.-fullwidth{
+p,
+label,
+a,
+span {
+    font-family: 'kanda';
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+}
+
+.-fullwidth {
     width: 100% !important;
+}
+
+.-no-padding {
+    padding: 0 !important;
 }
