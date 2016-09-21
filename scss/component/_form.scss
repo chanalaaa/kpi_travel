@@ -21,6 +21,10 @@ button.dropdown-toggle {
 }
 
 // input
+input {
+    font-size: 15px;
+}
+
 .form-inline {
     padding: 2em 0;
     &.form-group {
@@ -43,6 +47,49 @@ button.dropdown-toggle {
             display: inline-block;
             border-radius: 4px;
             font-family: 'kanda_b';
+        }
+    }
+    &.material {
+        .group {
+            position: relative;
+            margin: 15px 0;
+        }
+        input {
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #757575;
+            border-radius: 0px;
+            box-shadow: none;
+            &:focus {
+                outline: none;
+                & ~ label {
+                    top: -20px;
+                    font-size: 1.4em;
+                    color: #000;
+                }
+            }
+            &:valid {
+                outline: none;
+                & ~ label {
+                    top: -20px;
+                    font-size: 1.4em;
+                    color: #000;
+                }
+            }
+        }
+        label {
+            font-family: 'kanda_b';
+            color: #999;
+            font-size: 1.7em;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            top: 10px;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
         }
     }
 }
