@@ -12,7 +12,7 @@ block body
 	include ./layout/_header   
 	//- content 
 	.row
-		.col-sm-8.-block_center
+		.col-sm-7.-block_center
 			.step1_block.block_elements
 				p.step-title ประกันภัยเดินทาง
 				.step-connect_nav
@@ -35,7 +35,7 @@ block body
 						li.active: a(href='#sec_in', data-toggle='tab') IN
 						li: a(href='#sec_out', data-toggle='tab') OUT
 					.row
-						.tab-content.clearfix.col-sm-8.-block_center
+						.tab-content.clearfix.col-sm-9.-block_center
 							.tab-pane.active#sec_in
 								form.radioForm(role='form')
 									.radio.radio-inline
@@ -47,30 +47,30 @@ block body
 										label(for='radioYear')
 											| รายปี
 								.form-inline
-									label.col-xs-3(for='usr') Name:
+									label.col-sm-3.col-xs-5(for='usr') Name:
 									.form-group.col-sm-9.col-xs-12
 										input#usr.form-control(type='text')
 								.form-inline
-									label.col-xs-3 ไปยังประเทศ
+									label.col-sm-3.col-xs-5 ไปยังประเทศ
 									.form-group.col-sm-9.col-xs-12
 										select.selectpicker.-fullwidth
 											option Car
 											option Bird
 											option Thee
 								.form-inline
-									label.col-xs-3 เดินทางไป
+									label.col-sm-3.col-xs-5 เดินทางไป
 									.form-group.col-sm-9.col-xs-12
 										.datepick
 											input.form-control(type='text', name='startdate')
 											i.ico_datestart
 								.form-inline
-									label.col-xs-3 เดินทางกลับ
+									label.col-sm-3.col-xs-5 เดินทางกลับ
 									.form-group.col-sm-9.col-xs-12
 										.datepick
 											input.form-control(type='text', name='enddate')
 											i.ico_dateend
 								.form-inline.text-resultDate
-									label.col-xs-3 จำนวนวันเดินทาง
+									label.col-sm-3.col-xs-5 จำนวนวันเดินทาง
 									.col-xs-3
 										p 10
 
