@@ -4,7 +4,7 @@ block var
 	-var currentPage = "home"
 
 block title
-	title hi
+	title การเดินทาง
 	
 block jsFirst
 
@@ -19,7 +19,7 @@ block body
 				.col-sm-5.col-xs-8
 					p.pageHeader travel information
 
-			.step1_block.block_elements
+			.step_block.block_elements
 				//- p.step-title ประกันภัยเดินทาง
 				.step-connect_nav
 					.line_dot
@@ -44,7 +44,7 @@ block body
 					.row
 						.tab-content.clearfix.col-sm-10.col-md-9.-block_center
 							.tab-pane.active#sec_in
-								form
+								form(action="./step_2.html")
 									.radioForm(role='form')
 										.radio.radio-inline
 											input#radioRound(type='radio', name='trip', value='round',checked='')

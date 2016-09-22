@@ -1,0 +1,82 @@
+extends ./layout/_base
+
+block var
+	-var currentPage = "home"
+
+block title
+	title แผนคุ้มครอง
+	
+block jsFirst
+
+block body
+	include ./layout/_header   
+	//- content 
+	.bgPage.home
+	.row
+		.col-md-7.col-sm-8.-block_center
+			.row
+				.col-sm-5.col-xs-8
+					p.pageHeader Pick the Plan that Fits You
+			.step_block.block_elements
+				//- p.step-title ประกันภัยเดินทาง
+				.step-connect_nav
+					.line_dot
+					ul
+						li
+							a(href="#").circle: span 1
+							p การเดินทาง
+						li.active 
+							a(href="#").circle: span 2
+							p แผนคุ้มครอง
+						li
+							a(href="#").circle: span 3
+							p ผู้เอาประกัน
+						li
+							a(href="#").circle: span 4
+							p ยืนยัน
+				.plan_block.swipe
+					#customNav.customNavigation
+						i.prev.fa.fa-angle-left  
+						i.next.fa.fa-angle-right
+					.owl-carousel
+						.item
+							.plan-header
+								p Monthly savings
+							.plan-table
+								table.table
+									// caption Monthly savings
+									tbody
+										tr
+											td Otto
+											td @mdo
+										tr
+											td Thornton
+											td @fat
+										tr
+											td the Bird
+											td @twitter 
+						.item
+							.plan-header
+								p Monthly savings
+							.plan-table
+								table.table
+									// caption Monthly savings
+									tbody
+										tr
+											td Otto
+											td @mdo
+										tr
+											td Thornton
+											td @fat
+										tr
+											td the Bird
+											td @twitter
+
+
+
+	//- end content
+	include ./layout/_footer
+
+
+block js
+	//-script here

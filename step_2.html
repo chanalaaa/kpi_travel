@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>การเดินทาง</title>
+    <title>แผนคุ้มครอง</title>
     <script type="text/javascript" src="./js/vendors/jquery_v2.1.4.min.js?v=1001"></script>
     <script type="text/javascript" src="./js/vendors/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/vendors/bootstrap/bootstrap.min.css">
@@ -43,17 +43,17 @@
         <div class="col-md-7 col-sm-8 -block_center">
           <div class="row">
             <div class="col-sm-5 col-xs-8">
-              <p class="pageHeader">travel information</p>
+              <p class="pageHeader">Pick the Plan that Fits You</p>
             </div>
           </div>
           <div class="step_block block_elements">
             <div class="step-connect_nav">
               <div class="line_dot"></div>
               <ul>
-                <li class="active"> <a href="#" class="circle"><span>1</span></a>
+                <li><a href="#" class="circle"><span>1</span></a>
                   <p>การเดินทาง</p>
                 </li>
-                <li><a href="#" class="circle"><span>2</span></a>
+                <li class="active"> <a href="#" class="circle"><span>2</span></a>
                   <p>แผนคุ้มครอง</p>
                 </li>
                 <li><a href="#" class="circle"><span>3</span></a>
@@ -64,49 +64,55 @@
                 </li>
               </ul>
             </div>
-            <div class="step-tab">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#sec_in" data-toggle="tab">ต่างประเทศ</a></li>
-                <li><a href="#sec_out" data-toggle="tab">ในประเทศ</a></li>
-              </ul>
-              <div class="row">
-                <div class="tab-content clearfix col-sm-10 col-md-9 -block_center">
-                  <div id="sec_in" class="tab-pane active">
-                    <form action="./step_2.html">
-                      <div role="form" class="radioForm">
-                        <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
-                        <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
-                      </div>
-                      <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
-                      <div class="form-group inline_field"><label>เดินทางไป</label>
-                        <div class="datepick"><input type="text" name="startdate" class="form-control material"><i class="ico_datestart"></i></div>
-                      </div>
-                      <div class="form-group inline_field"><label>เดินทางกลับ</label>
-                        <div class="datepick"><input type="text" name="enddate" class="form-control material"><i class="ico_dateend"></i></div>
-                      </div>
-                      <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
-                        <p>10</p>
-                      </div><button type="submit" class="btn btn-primary -center">ถัดไป</button></form>
+            <div class="plan_block swipe">
+              <div id="customNav" class="customNavigation"><i class="prev fa fa-angle-left"> </i><i class="next fa fa-angle-right"></i></div>
+              <div class="owl-carousel">
+                <div class="item">
+                  <div class="plan-header">
+                    <p>Monthly savings</p>
                   </div>
-                  <div id="sec_out" class="tab-pane">
-                    <div id="sec_in" class="tab-pane active">
-                      <form>
-                        <div role="form" class="radioForm">
-                          <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
-                          <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
-                        </div>
-                        <div class="form-group inline_field"><label>จากประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
-                        <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
-                        <div class="form-group inline_field"><label>เดินทางไป</label>
-                          <div class="datepick"><input type="text" name="startdate" class="form-control material"><i class="ico_datestart"></i></div>
-                        </div>
-                        <div class="form-group inline_field"><label>เดินทางกลับ</label>
-                          <div class="datepick"><input type="text" name="enddate" class="form-control material"><i class="ico_dateend"></i></div>
-                        </div>
-                        <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
-                          <p>10</p>
-                        </div><button type="submit" class="btn btn-primary -center">ถัดไป</button></form>
-                    </div>
+                  <div class="plan-table">
+                    <table class="table">
+                      <!-- caption Monthly savings-->
+                      <tbody>
+                        <tr>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <td>the Bird</td>
+                          <td>@twitter </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="plan-header">
+                    <p>Monthly savings</p>
+                  </div>
+                  <div class="plan-table">
+                    <table class="table">
+                      <!-- caption Monthly savings-->
+                      <tbody>
+                        <tr>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                        <tr>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr>
+                        <tr>
+                          <td>the Bird</td>
+                          <td>@twitter</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
