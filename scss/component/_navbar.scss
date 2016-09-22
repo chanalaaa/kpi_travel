@@ -1,5 +1,5 @@
 .navbar {
-    margin: 10px 0 20px;
+    margin: 20px 0 20px;
     a {
         font-family: 'kanda_b';
         &.langChange {
@@ -7,11 +7,39 @@
             border-radius: 50%;
             padding: 10px;
             margin-top: 5px;
+            max-width: 43px;
+            max-height: 43px;
             &:hover {
                 border: 1px solid $darkgray;
                 color: $darkgray;
             }
         }
+    }
+    li:last-child {
+        padding: 0 15px;
+    }
+}
+
+// .navbar-header {
+//     display: inline;
+//     float: none;
+// }
+.navbar-brand {
+    width: 180px;
+    float: left;
+    height: auto;
+    padding: 0px 0px 0 25px;
+    font-size: 18px;
+    line-height: 20px;
+    @media #{$md} {
+        width: 150px;
+        padding: 0px 0px 0 30px;
+    }
+    @media #{$lg} {
+        width: 180px;
+    }
+    img {
+        width: 100%;
     }
 }
 
