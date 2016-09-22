@@ -96,6 +96,12 @@ span {
     line-height: 20px;
 }
 
+@media (min-width: 1200px) {
+    .container {
+        width: 1280px;
+    }
+}
+
 .-fullwidth {
     width: 100% !important;
 }

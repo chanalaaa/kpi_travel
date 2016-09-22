@@ -85,7 +85,50 @@ block body
 
 
 							.tab-pane#sec_out
-								p We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab
+								.tab-pane.active#sec_in
+									form
+										.radioForm(role='form')
+											.radio.radio-inline
+												input#radioRound(type='radio', name='trip', value='round',checked='')
+												label(for='radioRound')
+													| รายเที่ยว
+											.radio.radio-inline
+												input#radioYear(type='radio', name='trip', value='year')
+												label(for='radioYear')
+													| รายปี
+										//- .form-group.inline_field
+										//- 	label(for='usr') Name:
+										//- 	input#usr.form-control(type='text')
+										.form-group.inline_field
+											label จากประเทศ
+											select.selectpicker
+												option Car
+												option Bird
+												option Thee
+										.form-group.inline_field
+											label ไปยังประเทศ
+											select.selectpicker
+												option Car
+												option Bird
+												option Thee
+										.form-group.inline_field
+											label เดินทางไป
+											.datepick
+												input.form-control.material(type='text', name='startdate')
+												i.ico_datestart
+										.form-group.inline_field
+											label เดินทางกลับ
+											.datepick
+												input.form-control.material(type='text', name='enddate')
+												i.ico_dateend
+										.form-group.inline_field.text-resultDate
+											label จำนวนวันเดินทาง
+											p 10
+										//- .form-group.inline_field.materialLabel
+										//- 	.group
+										//- 		input(type='text' required)
+										//- 		label ไปยังประเทศ
+										button.btn.btn-primary.-center(type='submit') ถัดไป
 
 
 	//- end content

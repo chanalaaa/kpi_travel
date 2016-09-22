@@ -25,13 +25,14 @@
           <div class="container">
             <div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-onlyTogglenavigation"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
               <a
-                href="#" class="navbar-brand">Projectname</a>
+                href="./index.hmtl" class="navbar-brand"><img src="./images/insure_logo.png" alt="INSURE"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a href="#">ประกันภัยการเดินทาง</a></li>
+                <li><a href="#">ประกันภัยรถยนต์ </a></li>
+                <li><a href="#">ประกันอัคคีภัยและทรัพย์สิน</a></li>
+                <li><a href="#" class="langChange">TH</a></li>
               </ul>
             </div>
           </div>
@@ -88,7 +89,24 @@
                       </div><button type="submit" class="btn btn-primary -center">ถัดไป</button></form>
                   </div>
                   <div id="sec_out" class="tab-pane">
-                    <p>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</p>
+                    <div id="sec_in" class="tab-pane active">
+                      <form>
+                        <div role="form" class="radioForm">
+                          <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
+                          <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
+                        </div>
+                        <div class="form-group inline_field"><label>จากประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
+                        <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
+                        <div class="form-group inline_field"><label>เดินทางไป</label>
+                          <div class="datepick"><input type="text" name="startdate" class="form-control material"><i class="ico_datestart"></i></div>
+                        </div>
+                        <div class="form-group inline_field"><label>เดินทางกลับ</label>
+                          <div class="datepick"><input type="text" name="enddate" class="form-control material"><i class="ico_dateend"></i></div>
+                        </div>
+                        <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
+                          <p>10</p>
+                        </div><button type="submit" class="btn btn-primary -center">ถัดไป</button></form>
+                    </div>
                   </div>
                 </div>
               </div>
