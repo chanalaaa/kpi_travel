@@ -5,8 +5,11 @@
     background-repeat: repeat-x;
 }
 
-
 .plan_block.swipe {
+    display: block;
+    @media #{$md} {
+        display: none;
+    }
     td {
         border-style: dotted;
         border-width: 1px;
@@ -40,7 +43,7 @@
                     border-top: none;
                 }
             }
-             &:last-child {
+            &:last-child {
                 td {
                     border-bottom: none;
                 }
@@ -58,13 +61,30 @@
 .plan-header {
     position: relative;
     height: 9em;
-    background: #00BCD4;
     display: table;
     width: 100%;
-    p {
+    @include blue_gradient('v');
+    .plan-header_text {
         display: table-cell;
         vertical-align: middle;
-        color: #fff;
         padding-left: 20%;
+    }
+}
+
+.plan-header_text {
+    p {
+        vertical-align: middle;
+        color: #fff;
+        font-size: 2.2em;
+        line-height: .7em;
+        width: 55%;
+        margin-bottom: 0;
+        span {
+            font-family: 'kanda_b';
+            font-size: 1.5em;
+            display: block;
+            border-top: 1px solid #fff;
+            line-height: 1em;
+        }
     }
 }

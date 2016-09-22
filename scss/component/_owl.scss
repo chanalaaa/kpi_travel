@@ -11,14 +11,15 @@
             cursor: pointer;
             font-size: 3em;
             &:hover {
-                color: red;
+                opacity: .7;
             }
         }
         .prev {
             position: absolute;
             left: 3%;
             z-index: 2;
-            top: 1em;
+            top: 2.4em;
+            font-size: 22px;
         }
         .next {
             @extend .prev;

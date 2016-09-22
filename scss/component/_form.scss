@@ -158,8 +158,7 @@ label {
     border: none;
     font-size: 2em;
     padding: 0px 50px;
-    background: rgba(65, 193, 240, 1);
-    background: linear-gradient(to right, rgba(65, 193, 240, 1) 0%, rgba(128, 220, 238, 1) 100%);
+   @include blue_gradient('h');
     &:hover {
         opacity: .7;
     }
