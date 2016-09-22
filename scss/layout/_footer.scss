@@ -1,5 +1,53 @@
  // Footer //////////////////////////////////
+ footer {
+     background-color: #fff;
+     height: 12em;
+     width: 100%;
+     padding: 0 1em;
+ }
  
+ .footer_block {
+     padding-top: 5em;
+     img {
+         width: 80%;
+         max-width: 400px;
+            @media #{$md} {
+            	     width: 60%;
+            }
+     }
+     &.right {
+         float: right;
+         text-align: right;
+             padding-top: 2em;
+             padding-bottom: 2em;
+               @media #{$md} {
+                padding-top: 4.7em;
+                 padding-bottom: 0em;
+             }
+     }
+     p {
+         font-family: kanda;
+         font-size: 1.4em;
+         br {
+             display: none;
+             @media #{$md} {
+                 display: block;
+             }
+         }
+         span:first-child {
+             display: block;
+             padding-bottom: 5px;
+             font-size: 1.5em;
+             @media #{$md} {
+                 display: inline;
+                 padding-bottom: 0px;
+                 font-size: 1.4em;
+             }
+         }
+     }
+     span {
+         font-family: kanda_b;
+     }
+ }
  
  // End Footer //////////////////////////////////
-
