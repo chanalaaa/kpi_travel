@@ -5,7 +5,6 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-
     @media #{$md} {
         width: 80%;
     }
@@ -32,8 +31,8 @@
         flex-flow: column nowrap;
         .circle {
             position: relative;
-            width: 1.5em;
-            height: 1.5em;
+            width: 1em;
+            height: 1em;
             text-align: center;
             border-radius: 1em;
             background: $mainblue;
@@ -45,6 +44,9 @@
                 padding-left: 1px;
                 line-height: 1.2em;
                 font-size: 19px;
+            }
+            &:hover{
+                text-decoration: none;
             }
             // &:before {
             //     display: none;
@@ -67,17 +69,18 @@
         &.active {
             .circle {
                 background: $mainblue;
-                width: 1.5em;
-                height: 1.5em;
+                width: 1em;
+                height: 1em;
             }
         }
         &.active ~ li {
             .circle {
                 background: #fff;
                 border: 2px solid $darkgray;
-                width: 1em;
-                height: 1em;
+                width: .5em;
+                height: .5em;
                 margin: .3em auto;
+                pointer-events:none;
                 span {
                     display: none;
                 }

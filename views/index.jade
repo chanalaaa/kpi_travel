@@ -24,17 +24,17 @@ block body
 				.step-connect_nav
 					.line_dot
 					ul
-						li
-							.circle: span 1
-							p การเดินทาง
 						li.active 
-							.circle: span 2
+							a(href="#").circle: span 1
+							p การเดินทาง
+						li
+							a(href="#").circle: span 2
 							p แผนคุ้มครอง
 						li
-							.circle: span 3
+							a(href="#").circle: span 3
 							p ผู้เอาประกัน
 						li
-							.circle: span 4
+							a(href="#").circle: span 4
 							p ยืนยัน
 
 				.step-tab
@@ -54,9 +54,9 @@ block body
 											input#radioYear(type='radio', name='trip', value='year')
 											label(for='radioYear')
 												| รายปี
-									.form-group.inline_field
-										label(for='usr') Name:
-										input#usr.form-control(type='text')
+									//- .form-group.inline_field
+									//- 	label(for='usr') Name:
+									//- 	input#usr.form-control(type='text')
 									.form-group.inline_field
 										label ไปยังประเทศ
 										select.selectpicker
@@ -76,30 +76,17 @@ block body
 									.form-group.inline_field.text-resultDate
 										label จำนวนวันเดินทาง
 										p 10
-									.form-group.inline_field.materialLabel
-										.group
-											input(type='text' required)
-											label ไปยังประเทศ
+									//- .form-group.inline_field.materialLabel
+									//- 	.group
+									//- 		input(type='text' required)
+									//- 		label ไปยังประเทศ
 									button.btn.btn-primary.-center(type='submit') ถัดไป
 
 
 
 							.tab-pane#sec_out
 								p We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-	br
-				
 
-
-
-
-	
 
 	//- end content
 	include ./layout/_footer

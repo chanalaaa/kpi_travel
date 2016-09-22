@@ -38,7 +38,6 @@ jQuery(document).ready(function($) {
         showDropdowns: false,
         opens: 'left',
 
-        //autoUpdateInput: false,
     });
     $(".ico_datestart").on("click", function() {
         $('input[name="startdate"]').trigger("click");
@@ -46,6 +45,15 @@ jQuery(document).ready(function($) {
     $(".ico_dateend").on("click", function() {
         $('input[name="enddate"]').trigger("click");
     })
+
+    $('input[name="startdate"]').on('apply.daterangepicker', function(ev, picker) {
+        console.log("startdate: "+ picker.startDate.format('YYYY-MM-DD'));
+    });
+
+    $('input[name="enddate"]').on('apply.daterangepicker', function(ev, picker) {
+        console.log("enddate: "+ picker.startDate.format('YYYY-MM-DD'));
+
+    });
 
 
 

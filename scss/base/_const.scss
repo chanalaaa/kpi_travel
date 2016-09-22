@@ -45,7 +45,8 @@ body {
 }
 
 .bgPage {
-    position: absolute;
+    position: fixed;
+    //position: absolute;
     min-height: 100%;
     min-width: 100%;
     height: auto;
