@@ -25,6 +25,19 @@ button.dropdown-toggle {
 input {
     font-size: 15px;
     margin: 0;
+    &.material {
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $lightgray;
+        border-radius: 0px;
+        box-shadow: none;
+        &:focus{
+            box-shadow: none;
+            border-color: $mainblue;
+        }
+    }
 }
 
 label {
@@ -73,7 +86,7 @@ label {
             }
         }
     }
-    &.material {
+    &.materialLabel {
         .group {
             position: relative;
             margin: 15px 0;
@@ -88,11 +101,12 @@ label {
             display: block;
             width: 100%;
             border: none;
-            border-bottom: 1px solid #757575;
+            border-bottom: 1px solid $lightgray;
             border-radius: 0px;
             box-shadow: none;
             &:focus {
                 outline: none;
+                border-color: $mainblue;
                 & ~ label {
                     top: -20px;
                     font-size: 1.4em;
@@ -138,8 +152,6 @@ label {
     }
 }
 
-
-
 .btn-primary {
     margin: 3em auto;
     font-family: 'kanda_b';
@@ -148,7 +160,7 @@ label {
     padding: 0px 50px;
     background: rgba(65, 193, 240, 1);
     background: linear-gradient(to right, rgba(65, 193, 240, 1) 0%, rgba(128, 220, 238, 1) 100%);
-    &:hover{
+    &:hover {
         opacity: .7;
     }
 }
@@ -173,7 +185,7 @@ label {
         bottom: 5px;
         right: 9px;
         cursor: pointer;
-        color: #CBCBCB;
+        color: $darkgray;
         font-size: 18px;
         float: right;
         @media #{$md} {
