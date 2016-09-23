@@ -20,20 +20,21 @@ tbody {
     td {
         border-style: dotted;
         border-width: 1px;
-        border-color: #ddd;
+        border-color: $lightgray30;
         vertical-align: middle;
+        line-height: 20px;
         &:first-child {
             width: 75%;
             border-left: none;
             text-align: left;
         }
         &:not(:first-child) {
-            border-left: 1px solid #ddd;
+            border-left: 1px solid $lightgray30;
             padding: 15px 8px;
             text-align: left;
             border-style: dotted;
             border-width: 1px;
-            border-color: #ddd;
+            border-color: $lightgray30;
             border-right: none;
         }
     }

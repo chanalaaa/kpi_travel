@@ -3,3 +3,75 @@
     font-size: 14px;
     font-size: 1.4rem;
 }
+
+.step-history {
+    background-color: $lightgray40;
+    padding: 1em 0;
+    .item_history {
+        padding: 0 15px;
+    }
+}
+
+.item_history {
+    font-size: 1.6em;
+    p {
+        font-family: kanda_b;
+        color: #000;
+        margin: 0 0 .2em;
+    }
+    .history_head {
+        padding: 0 15px;
+        border-bottom: 1px dotted $lightgray;
+        p.history-title {
+            display: inline-block;
+            color: $darkgray;
+            margin: 0 0 .2em;
+        }
+        a.history-action {
+            display: inline-block;
+            float: right;
+            color: $darkgray;
+            padding-top: 8px;
+             font-family: kanda_b;
+            i.fa {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .history_detail {
+        font-family: kanda_b;
+        color: #000;
+        padding: 15px 0;
+        p {
+            margin: 0em;
+        }
+        ul {
+             line-height: 20px;
+            li {
+                display: inline-block;
+
+            }
+            &.place-go {
+                li:first-child::after {
+                    content: '\f178';
+                    font-family: fontAwesome;
+                    color: $darkgray;
+                    margin-left: 13px;
+                    margin-right: 3px;
+                    font-size: .7em;
+                }
+            }
+            &.duration-go {
+                li:first-child::after {
+                    content: '\f021';
+                    font-family: fontAwesome;
+                    color: $darkgray;
+                   margin-left: 13px;
+                    margin-right: 3px;
+                    font-size: .7em;
+                }
+            }
+        }
+    }
+}

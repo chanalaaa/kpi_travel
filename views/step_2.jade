@@ -34,6 +34,29 @@ block body
 						li
 							a(href="#").circle: span 4
 							p ยืนยัน
+				.step-history
+					.row
+						.col-sm-12
+							.item_history
+								.history_head
+									p.history-title รายละเอียดการเดินทาง
+									a(href="#").history-action
+										i.fa.fa-chevron-circle-left
+										| แก้ไข
+								.history_detail
+									.col-sm-6
+										p เดินทางต่างประเทศ รายเที่ยว
+									.col-sm-6
+										ul.place-go
+											li ประเทศไทย
+											li สวิตเซอร์แลนด์
+									.col-sm-6
+										ul.duration-go
+											li 11/08/2016
+											li 21/08/2016 
+									.col-sm-6
+										p รวม 10 วัน
+
 				.plan_block.swipe
 					#customNav.customNavigation
 						i.prev.fa.fa-chevron-circle-left
@@ -47,60 +70,6 @@ block body
 										
 							.plan-table
 								table.table
-									// caption Monthly savings
-									tbody
-										tr
-											td การเสียชีวิตหรืออวัยวะเนื่องจาก<br> อุบัติเหตุ ตลอด 24 ชั่วโมง
-											td 2,000,000
-										tr
-											td การบอกเลิกการเดินทาง
-											td 100,000
-										tr
-											td การลดจํานวนวันเดินทาง
-											td 100,000 	
-										tr
-											td การสูญเสีย หรือเสียหายของ<br> กระเป๋าเดินทางและทรัพย์สินส่วนตัว
-											td 10,000
-										tr
-											td ค่ารักษาพยาบาลเนื่องจาก<br> อุบัติเหตุหรือการเจ็บป่วย
-											td 2,000,000
-										tr
-											td ค่าใช้จ่ายในการเคล่ือนย้าย<br> หรือการส่งกลับเพื่อการรักษาพยาบาล
-											td 2,000,000
-										tr
-											td ค่าใช้จ่ายในการส่งศพกลับประเทศ
-											td 2,000,000
-										tr
-											td การล่าช้าของการเดินทาง
-											td 10,000
-										tr
-											td การพลาดการต่อเที่ยวบิน
-											td 10,000
-										tr
-											td ความรับผิดตามกฎหมาย<br> ต่อบุคคลภายนอก
-											td 1,000,000
-										tr
-											td บริการช่วยเหลือฉุกเฉิน 24 ชั่วโมง
-											td รวมอยู่ด้วย
-										tr
-											td ผลประโยชน์การล่าช้าของกระเป๋าเดินทาง
-											td -
-										tr
-											td ความรับผิดชอบต่อบัตรเครดิต
-											td - 
-
-								a(href="#").read_more อ่านรายละเอียดเพิ่มเติม
-								button.btn.btn-primary.-center(type='submit') ถัดไป
-
-						.item
-							.plan-header
-								.plan-header_text
-									p วีซ่าพลัส
-										span 641 บาท
-										
-							.plan-table
-								table.table
-									// caption Monthly savings
 									tbody
 										tr
 											td การเสียชีวิตหรืออวัยวะเนื่องจาก<br> อุบัติเหตุ ตลอด 24 ชั่วโมง
@@ -152,7 +121,6 @@ block body
 										
 							.plan-table
 								table.table
-									// caption Monthly savings
 									tbody
 										tr
 											td การเสียชีวิตหรืออวัยวะเนื่องจาก<br> อุบัติเหตุ ตลอด 24 ชั่วโมง
@@ -204,7 +172,57 @@ block body
 										
 							.plan-table
 								table.table
-									// caption Monthly savings
+									tbody
+										tr
+											td การเสียชีวิตหรืออวัยวะเนื่องจาก<br> อุบัติเหตุ ตลอด 24 ชั่วโมง
+											td 2,000,000
+										tr
+											td การบอกเลิกการเดินทาง
+											td 100,000
+										tr
+											td การลดจํานวนวันเดินทาง
+											td 100,000 	
+										tr
+											td การสูญเสีย หรือเสียหายของ<br> กระเป๋าเดินทางและทรัพย์สินส่วนตัว
+											td 10,000
+										tr
+											td ค่ารักษาพยาบาลเนื่องจาก<br> อุบัติเหตุหรือการเจ็บป่วย
+											td 2,000,000
+										tr
+											td ค่าใช้จ่ายในการเคล่ือนย้าย<br> หรือการส่งกลับเพื่อการรักษาพยาบาล
+											td 2,000,000
+										tr
+											td ค่าใช้จ่ายในการส่งศพกลับประเทศ
+											td 2,000,000
+										tr
+											td การล่าช้าของการเดินทาง
+											td 10,000
+										tr
+											td การพลาดการต่อเที่ยวบิน
+											td 10,000
+										tr
+											td ความรับผิดตามกฎหมาย<br> ต่อบุคคลภายนอก
+											td 1,000,000
+										tr
+											td บริการช่วยเหลือฉุกเฉิน 24 ชั่วโมง
+											td รวมอยู่ด้วย
+										tr
+											td ผลประโยชน์การล่าช้าของกระเป๋าเดินทาง
+											td -
+										tr
+											td ความรับผิดชอบต่อบัตรเครดิต
+											td - 
+
+								a(href="#").read_more อ่านรายละเอียดเพิ่มเติม
+								button.btn.btn-primary.-center(type='submit') ถัดไป
+						.item
+							.plan-header
+								.plan-header_text
+									p วีซ่าพลัส
+										span 641 บาท
+										
+							.plan-table
+								table.table
 									tbody
 										tr
 											td การเสียชีวิตหรืออวัยวะเนื่องจาก<br> อุบัติเหตุ ตลอด 24 ชั่วโมง
