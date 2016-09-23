@@ -30,12 +30,13 @@ tbody {
         }
         &:not(:first-child) {
             border-left: 1px solid $lightgray30;
-            padding: 15px 8px;
+            //padding: 15px 8px;
             text-align: left;
             border-style: dotted;
             border-width: 1px;
             border-color: $lightgray30;
             border-right: none;
+            vertical-align: top;
         }
     }
     tbody {
