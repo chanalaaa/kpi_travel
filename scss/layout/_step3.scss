@@ -1,3 +1,11 @@
+.info_list {
+    margin-bottom: 3em;
+    &.action {
+        a.header-action {
+            display: inline-block;
+        }
+    }
+}
 
 .info-header {
     padding: 0 15px;
@@ -13,7 +21,7 @@
         margin-bottom: 0;
     }
     a.header-action {
-        display: inline-block;
+        display: none;
         float: right;
         color: #fff;
         padding: 10px 0;
@@ -35,3 +43,16 @@ p.ps {
 }
 
 .form-group {}
+
+a.line_add {
+    display: block;
+    color: $darkgray;
+    padding: 10px 0;
+    font-size: 1.7em;
+    padding: 1em 0;
+    i.fa {
+        font-family: fontAwesome;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+}
