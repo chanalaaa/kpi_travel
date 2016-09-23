@@ -15,7 +15,7 @@ block body
 	.row
 		.col-sm-8.-block_center
 			.row
-				.col-sm-5.col-xs-8
+				.col-sm-5.col-xs-12
 					p.pageHeader Pick the Plan that Fits You
 			.step_block.block_elements
 				//- p.step-title ประกันภัยเดินทาง
@@ -75,6 +75,50 @@ block body
 									a(href="#").header-action 
 										i.fa.fa-times-circle
 										| ลบ
+								p.ps *กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง
+								form
+									.form-group.inline_field
+										.row
+											.col-sm-6.-no-padding
+												.row
+													.col-xs-4
+														select.selectpicker
+															option Mr.
+															option Mrs.
+													.col-xs-8
+														.form-group.inline_field.materialLabel
+															.group
+																input(type='text' required)
+																label ชื่อ
+											.col-sm-6.-no-padding
+												.row
+													.col-sm-12
+														.form-group.inline_field.materialLabel
+															.group
+																input(type='text' required)
+																label นามสกุล
+									.form-group.inline_field
+										.row
+											.col-sm-6.-no-padding
+												label นามสกุล
+												.row
+
+													.col-xs-3
+														select.selectpicker
+															option 1
+															option 2
+													.col-xs-5.-no-padding
+														select.selectpicker
+															option January
+															option February
+													.col-xs-4
+														select.selectpicker
+															option 2000
+															option 2001
+
+
+
+
 
 
 
