@@ -1,0 +1,77 @@
+extends ./layout/_base
+
+block var
+	-var currentPage = "home"
+
+block title
+	title ผู้เอาประกัน
+	
+block jsFirst
+
+block body
+	include ./layout/_header   
+	//- content 
+	.bgPage.home
+	.row
+		.col-sm-8.-block_center
+			.row
+				.col-sm-5.col-xs-8
+					p.pageHeader Pick the Plan that Fits You
+			.step_block.block_elements
+				//- p.step-title ประกันภัยเดินทาง
+				.step-connect_nav
+					.line_dot
+					ul
+						li
+							a(href="./index.html").circle: span 1
+							p การเดินทาง
+						li
+							a(href="#").circle: span 2
+							p แผนคุ้มครอง
+						li.active 
+							a(href="#").circle: span 3
+							p ผู้เอาประกัน
+						li
+							a(href="#").circle: span 4
+							p ยืนยัน
+				.step-history
+					.row
+						.col-sm-12
+							.item_history
+								.history_head
+									p.history-title รายละเอียดการเดินทาง
+									a(href="#").history-action
+										i.fa.fa-chevron-circle-left
+										| แก้ไข
+								.history_detail
+									.col-sm-6
+										p เดินทางต่างประเทศ รายเที่ยว
+									.col-sm-6
+										ul.place-go
+											li ประเทศไทย
+											li สวิตเซอร์แลนด์
+									.col-sm-6
+										ul.duration-go
+											li 11/08/2016
+											li 21/08/2016 
+									.col-sm-6
+										p รวม 10 วัน
+							.item_history
+								.history_head
+									p.history-title แผนคุ้มครอง
+									a(href="#").history-action
+										i.fa.fa-chevron-circle-left
+										| แก้ไข
+								.history_detail
+									.col-sm-6
+										p วีซ่าพลัส 641 บาท
+
+
+
+
+	//- end content
+	include ./layout/_footer
+
+
+block js
+	//-script here

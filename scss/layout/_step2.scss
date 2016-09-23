@@ -15,6 +15,9 @@
 
 .item_history {
     font-size: 1.6em;
+    margin-bottom: 1em;
+    display: inline-block;
+    width: 100%;
     p {
         font-family: kanda_b;
         color: #000;
@@ -33,7 +36,7 @@
             float: right;
             color: $darkgray;
             padding-top: 8px;
-             font-family: kanda_b;
+            font-family: kanda_b;
             i.fa {
                 font-size: 15px;
                 margin-right: 5px;
@@ -48,10 +51,9 @@
             margin: 0em;
         }
         ul {
-             line-height: 20px;
+            line-height: 20px;
             li {
                 display: inline-block;
-
             }
             &.place-go {
                 li:first-child::after {
@@ -68,7 +70,7 @@
                     content: '\f021';
                     font-family: fontAwesome;
                     color: $darkgray;
-                   margin-left: 13px;
+                    margin-left: 13px;
                     margin-right: 3px;
                     font-size: .7em;
                 }

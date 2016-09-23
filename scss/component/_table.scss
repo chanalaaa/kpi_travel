@@ -199,13 +199,13 @@ th {
     position: relative;
     outline: 0;
 }
-
-td:hover::after,
-.ff-fix:hover::after,
-thead th:not(:empty):hover::after,
-td:focus::after,
-.ff-fix:focus::after,
-thead th:not(:empty):focus::after {
+ @media #{$md} {
+    td:hover::after,
+    .ff-fix:hover::after,
+    thead th:not(:empty):hover::after,
+    td:focus::after,
+    .ff-fix:focus::after,
+    thead th:not(:empty):focus::after {
     content: '';
     height: 10000px;
     left: 0;
@@ -246,3 +246,5 @@ tbody th:focus::before {
     width: 10000px;
     z-index: -1;
 }
+
+ }
