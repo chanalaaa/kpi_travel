@@ -5,18 +5,7 @@
     background-repeat: repeat-x;
 }
 
-tbody {
-    font-family: 'kanda';
-    font-size: 1.4em;
-    color: $darkgray;
-    letter-spacing: 2px;
-}
-
-.plan_block.swipe {
-    display: block;
-    @media #{$md} {
-        display: none;
-    }
+table {
     td {
         border-style: dotted;
         border-width: 1px;
@@ -40,6 +29,10 @@ tbody {
         }
     }
     tbody {
+        font-family: 'kanda';
+        font-size: 1.4em;
+        color: $darkgray;
+        letter-spacing: 2px;
         padding: 15px;
         margin-top: 25px;
         &:before {
@@ -48,9 +41,12 @@ tbody {
             height: 20px;
         }
         tr {
+            td {
+                border-top: 1px dotted #ddd !important;
+            }
             &:first-child {
                 td {
-                    border-top: none;
+                    border-top: none !important;
                 }
             }
             &:last-child {
@@ -58,6 +54,25 @@ tbody {
                     border-bottom: none;
                 }
             }
+        }
+    }
+}
+
+.plan_block.swipe {
+    display: block;
+    @media #{$md} {
+        display: none;
+    }
+    .plan-header {
+        position: relative;
+        height: 9em;
+        display: table;
+        width: 100%;
+        @include blue_gradient('v');
+        .plan-header_text {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20%;
         }
     }
 }
@@ -74,27 +89,15 @@ tbody {
     }
 }
 
-.plan-header {
-    position: relative;
-    height: 9em;
-    display: table;
-    width: 100%;
-    @include blue_gradient('v');
-    .plan-header_text {
-        display: table-cell;
-        vertical-align: middle;
-        padding-left: 20%;
-    }
-    .highlightTag{
-        position: absolute;
-        top: 0;
-        right: 17%;
-        background: url("../images/tag.png") no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
-        width:16px;
-        height:45px;  
-    }
+.highlightTag {
+    position: absolute;
+    top: 0;
+    right: 17%;
+    background: url("../images/tag.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 16px;
+    height: 45px;
 }
 
 .plan-header_text {
@@ -115,4 +118,12 @@ tbody {
             max-width: 150px;
         }
     }
+}
+
+.plan_block.tablelist {
+    display: none;
+    @media #{$md} {
+        display: block;
+    }
+    td {}
 }
