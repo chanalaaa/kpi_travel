@@ -84,6 +84,16 @@ tbody {
         vertical-align: middle;
         padding-left: 20%;
     }
+    .highlightTag{
+        position: absolute;
+        top: 0;
+        right: 17%;
+        background: url("../images/tag.png") no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        width:16px;
+        height:45px;  
+    }
 }
 
 .plan-header_text {
