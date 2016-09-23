@@ -25,7 +25,10 @@
     .bootstrap-select.btn-group .dropdown-menu li a span.text {
         font-family: kanda_b;
     }
-    
+    .bootstrap-select>.dropdown-toggle {
+        padding-right: 0px;
+        padding: 6px 23px 6px 6px;
+    }
     // input
     input {
         font-size: 15px;
@@ -115,7 +118,7 @@
                     & ~ label {
                         top: -20px;
                         font-size: 1.4em;
-                        color: #000;
+                        color: $darkgray;
                     }
                 }
                 &:valid {
@@ -123,13 +126,13 @@
                     & ~ label {
                         top: -20px;
                         font-size: 1.4em;
-                        color: #000;
+                        color: $darkgray;
                     }
                 }
             }
             label {
                 font-family: 'kanda_b';
-                color: #999;
+                color: $lightgray20;
                 font-size: 1.7em;
                 font-weight: normal;
                 position: absolute;
@@ -137,6 +140,7 @@
                 top: 5px;
                 transition: 0.2s ease all;
                 width: 100%;
+                padding-left: 10px;
             }
         }
         .selectpicker {
@@ -224,18 +228,29 @@
     .infomation_block {
         form {
             .inline_field {
-                margin-bottom: 1.7em;
-            }
-            .row > [class^="col-sm-"] label {
-                font-family: 'kanda_b';
-                color: $darkgray;
-                font-size: 1.4em;
-                font-weight: normal;
-                pointer-events: none;
-                transition: 0.2s ease all;
-                width: 100%;
-                padding-left: 25px;
-
+                margin-bottom: .8em;
+                [class^="col-"] {
+                    position: relative;
+                }
+                 @media #{$md} {
+                     margin-bottom: 1.7em;
+                 }
+                label.top {
+                    font-family: 'kanda_b';
+                    color: $darkgray;
+                    font-size: 1.4em;
+                    font-weight: normal;
+                    pointer-events: none;
+                    position: relative;
+                    width: 100%;
+                    padding-left: 25px;
+                    margin: 0;
+                    @media #{$md} {
+                        position: absolute;
+                        top: -1.5em;
+                        left: 0;
+                    }
+                }
             }
         }
     }
