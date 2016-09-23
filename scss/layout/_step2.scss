@@ -15,9 +15,12 @@
 
 .item_history {
     font-size: 1.6em;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     display: inline-block;
     width: 100%;
+    @media #{$md} {
+        margin-bottom: 1em;
+    }
     p {
         font-family: kanda_b;
         color: #000;

@@ -1,0 +1,28 @@
+.infomation_block {}
+
+.info-header {
+    padding: 0 15px;
+    display: inline-block;
+    width: 100%;
+    background-color: $mainblue;
+    font-family: kanda_b;
+    p.header-title {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+    a.header-action {
+        display: inline-block;
+        float: right;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 1.7em;
+        i.fa {
+            font-family: fontAwesome;
+            font-size: 15px;
+            margin-right: 5px;
+        }
+    }
+}
