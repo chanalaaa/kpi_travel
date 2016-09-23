@@ -5,6 +5,13 @@
     background-repeat: repeat-x;
 }
 
+tbody {
+    font-family: 'kanda';
+    font-size: 1.4em;
+    color: $darkgray;
+    letter-spacing: 2px;
+}
+
 .plan_block.swipe {
     display: block;
     @media #{$md} {
@@ -18,11 +25,12 @@
         &:first-child {
             width: 75%;
             border-left: none;
+            text-align: left;
         }
         &:not(:first-child) {
             border-left: 1px solid #ddd;
             padding: 15px 8px;
-            text-align: center;
+            text-align: left;
             border-style: dotted;
             border-width: 1px;
             border-color: #ddd;
@@ -56,6 +64,12 @@
     padding: 15px;
     display: block;
     width: 100%;
+    text-align: center;
+    a.read_more {
+        font-size: 1.3em;
+        text-decoration: underline;
+        color: $darkgray;
+    }
 }
 
 .plan-header {
@@ -79,12 +93,14 @@
         line-height: .7em;
         width: 55%;
         margin-bottom: 0;
+        white-space: nowrap;
         span {
             font-family: 'kanda_b';
             font-size: 1.5em;
             display: block;
             border-top: 1px solid #fff;
             line-height: 1em;
+            max-width: 150px;
         }
     }
 }
