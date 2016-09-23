@@ -12,20 +12,14 @@ table {
         border-color: $lightgray30;
         vertical-align: middle;
         line-height: 20px;
-        &:first-child {
-            width: 75%;
-            border-left: none;
-            text-align: left;
-        }
-        &:not(:first-child) {
-            border-left: 1px solid $lightgray30;
-            //padding: 15px 8px;
-            text-align: left;
-            border-style: dotted;
-            border-width: 1px;
-            border-color: $lightgray30;
-            border-right: none;
-            vertical-align: top;
+    }
+    thead {
+        tr {
+            td {
+                border: none;
+                border-bottom: 1px solid $lightgray20;
+                padding: 20px 8px 15px !important;
+            }
         }
     }
     tbody {
@@ -43,6 +37,25 @@ table {
         tr {
             td {
                 border-top: 1px dotted #ddd !important;
+                line-height: 20px !important;
+                &:first-child {
+                    width: 75%;
+                    border-left: none;
+                    text-align: left;
+                    @media #{$md} {
+                        width: 40%;
+                    }
+                }
+                &:not(:first-child) {
+                    border-left: 1px solid $lightgray30;
+                    //padding: 15px 8px;
+                    text-align: left;
+                    border-style: dotted;
+                    border-width: 1px;
+                    border-color: $lightgray30;
+                    border-right: none;
+                    vertical-align: top;
+                }
             }
             &:first-child {
                 td {
@@ -82,10 +95,15 @@ table {
     display: block;
     width: 100%;
     text-align: center;
-    a.read_more {
-        font-size: 1.3em;
-        text-decoration: underline;
-        color: $darkgray;
+}
+
+a.read_more {
+    font-size: 1.3em;
+    text-decoration: underline;
+    color: $darkgray;
+    @media #{$md} {
+        font-size: .9em;
+        text-align: left;
     }
 }
 
@@ -109,13 +127,23 @@ table {
         width: 55%;
         margin-bottom: 0;
         white-space: nowrap;
+        @media #{$md} {
+            font-size: 1.35em;
+            width: auto;
+            color: $darkgray;
+            white-space: normal;
+        }
         span {
             font-family: 'kanda_b';
             font-size: 1.5em;
-            display: block;
             border-top: 1px solid #fff;
             line-height: 1em;
+            display: block;
             max-width: 150px;
+            @media #{$md} {
+                display: inline;
+                color: $darkgray;
+            }
         }
     }
 }
@@ -125,5 +153,28 @@ table {
     @media #{$md} {
         display: block;
     }
-    td {}
+    .btn-primary {
+        @media #{$md} {
+            color: $darkgray;
+            background: #fff;
+            border: 1px solid $lightgray20;
+            font-size: 1.3em;
+            padding: 0 20px;
+            line-height: 1.2em;
+        }
+    }
+    table tbody {
+        tr {
+            &:nth-last-child(2) {
+                td {
+                    border: none !important
+                }
+            }
+            &:last-child {
+                td {
+                    border: none !important
+                }
+            }
+        }
+    }
 }
