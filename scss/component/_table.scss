@@ -43,7 +43,7 @@ table {
                     border-left: none;
                     text-align: left;
                     @media #{$md} {
-                        width: 40%;
+                        width: 35%;
                     }
                 }
                 &:not(:first-child) {
@@ -143,6 +143,7 @@ a.read_more {
             @media #{$md} {
                 display: inline;
                 color: $darkgray;
+                border-top: none;
             }
         }
     }
@@ -163,18 +164,83 @@ a.read_more {
             line-height: 1.2em;
         }
     }
-    table tbody {
-        tr {
-            &:nth-last-child(2) {
-                td {
-                    border: none !important
+    table {
+        tbody {
+            tr {
+                &:nth-last-child(3) {
+                    td {
+                        border-bottom: none !important
+                    }
                 }
-            }
-            &:last-child {
-                td {
-                    border: none !important
+                &:nth-last-child(2) {
+                    td {
+                        border: none !important
+                    }
+                }
+                &:last-child {
+                    td {
+                        border-radius: 4px;
+                        border: none !important
+                    }
                 }
             }
         }
     }
+}
+
+// table row hover
+table {
+    overflow: hidden;
+}
+
+td,
+th {
+    padding: 10px;
+    position: relative;
+    outline: 0;
+}
+
+td:hover::after,
+thead th:not(:empty):hover::after,
+td:focus::after,
+thead th:not(:empty):focus::after {
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+   
+}
+
+td:hover::after {
+    @include blue_gradient('v');
+}
+
+td:focus::after {
+    @include blue_gradient('v');
+}
+
+td.title:hover::after {
+    background: transparent;
+}
+
+td.title:focus::after {
+    background: transparent;
+}
+
+
+/* Focus stuff for mobile */
+
+td:focus::before,
+tbody th:focus::before {
+    background-color: lightblue;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: -5000px;
+    position: absolute;
+    width: 10000px;
+    z-index: -1;
 }

@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-
+    /* table carousel */
     $('.owl-carousel').owlCarousel({
         navContainer: '#customNav',
         responsive: {
@@ -19,12 +19,7 @@ jQuery(document).ready(function($) {
             $this.trigger('prev.owl.carousel');
         });
     });
-
-
-    $(".dropdown-menu").on('click', 'li', function() {
-        $(this).parents('.dropdown').find('.dropdown-toggle').html($(this).text() + '<span class="caret"></span>');
-    });
-
+    /* dropdown */
     $('.selectpicker').selectpicker({
         size: 4
     });
@@ -47,89 +42,24 @@ jQuery(document).ready(function($) {
     })
 
     $('input[name="startdate"]').on('apply.daterangepicker', function(ev, picker) {
-        console.log("startdate: "+ picker.startDate.format('YYYY-MM-DD'));
+        console.log("startdate: " + picker.startDate.format('YYYY-MM-DD'));
     });
 
     $('input[name="enddate"]').on('apply.daterangepicker', function(ev, picker) {
-        console.log("enddate: "+ picker.startDate.format('YYYY-MM-DD'));
+        console.log("enddate: " + picker.startDate.format('YYYY-MM-DD'));
 
     });
 
-
-
+    /* table hover */
+    if (screen.width < 500) {
+        $("body").addClass("nohover");
+        $("td, th")
+            .attr("tabindex", "1")
+            .on("touchstart", function() {
+                $(this).focus();
+            });
+    }
 
 });
 
 
-
-
-/*
-function openNavList() {
-    var navList = document.querySelector('.navList')
-    navList.classList.toggle('collapse');
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-// var itemTable = 1;
-// var $table = $(".tablesaw-swipe");
-// var lenTable = $(".tablesaw-advance-dots li").length;
-// $prevBtn = $(".btn-micro.left");
-// $nextBtn = $(".btn-micro.right");
-
-// $prevBtn.on("click", function(e) {
-//     if (itemTable === 1 || itemTable < 1) {
-//         return;
-//     } else {
-//         itemTable -= 1;
-//         prevTable(itemTable);
-//     }
-//     e.preventDefault();
-// });
-
-// $nextBtn.on("click", function(e) {
-//     console.log(itemTable);
-//     if (itemTable === lenTable || itemTable > lenTable) {
-//         return;
-//     } else {
-//         itemTable += 1;
-//         nextTable(itemTable);
-//     }
-//     e.preventDefault();
-// });
-
-// $table
-//     .on("tablesawcolumns.swipetoggle", function() {
-//         var canGoPrev = nextTable(itemTable + 1);
-//         var canGoNext = prevTable(itemTable);
-//     })
-//     .on("tablesawnext.swipetoggle", function() {
-//         alert("fe");
-//         itemTable += 1;
-//     })
-//     .on("tablesawprev.swipetoggle", function() {
-//         itemTable -= 1;
-//     });
-
-
-// function getCoord(event, key) {
-//     return (event.touches || event.originalEvent.touches)[0][key];
-// }
-
-// function nextTable(itemTable) {
-//     document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
-// }
-
-// function prevTable(itemTable) {
-//     document.getElementById("captionTitle").innerHTML = "Paragraph changed!" + itemTable;
-// }
