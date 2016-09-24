@@ -29,6 +29,14 @@
         display: flex;
         flex: 1;
         flex-flow: column nowrap;
+        p {
+            font-family: kanda_b;
+            font-size: 16px;
+            color: $mainblue;
+            @media #{$md} {
+                font-size: 20px;
+            }
+        }
         .circle {
             position: relative;
             width: 1em;
@@ -45,9 +53,11 @@
                 line-height: 1.2em;
                 font-size: 19px;
             }
-            &:hover,&:focus{
+            &:hover,
+            &:focus {
                 text-decoration: none;
             }
+
             // &:before {
             //     display: none;
             //     content: '';
@@ -72,6 +82,9 @@
                 width: 1em;
                 height: 1em;
             }
+            p {
+                color: $mainblue;
+            }
         }
         &.active ~ li {
             .circle {
@@ -80,7 +93,7 @@
                 width: .5em;
                 height: .5em;
                 margin: .3em auto;
-                pointer-events:none;
+                pointer-events: none;
                 span {
                     display: none;
                 }
@@ -90,14 +103,10 @@
                 //     margin-left: -10px;
                 // }
             }
-        }
-    }
-    p {
-        font-family: kanda_b;
-        font-size: 16px;
-        color: $darkgray;
-        @media #{$md} {
-            font-size: 20px;
+             p {
+                color: $darkgray;
+            }
+
         }
     }
 }
