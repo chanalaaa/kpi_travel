@@ -13,6 +13,9 @@
         color: #000;
         margin: 0 0 .2em;
     }
+    &:last-child {
+        margin-bottom: 0;
+    }
     .result-header {
         @extend .info-header;
         background-color: $lightgray40;
@@ -94,7 +97,7 @@
                 @media #{$md} {
                     width: 90%;
                 }
-                  @media #{$lg} {
+                @media #{$lg} {
                     width: 70%;
                 }
             }
@@ -102,5 +105,59 @@
     }
     .line_dot {
         margin-bottom: 1.5em;
+    }
+}
+
+.summary_block {
+    background: $mainblue;
+    padding: 1em 0em;
+    text-align: center;
+    @media #{$lg} {
+        padding: 1em 6em;
+    }
+    p {
+        color: #fff;
+        font-family: 'kanda_b';
+        font-size: 1.4em;
+        @media #{$lg} {
+            white-space: nowrap;
+        }
+        &.value {
+            font-size: 2.2em;
+        }
+    }
+    p.text-resultDate {
+        background-color: #fff;
+        color: $darkgray;
+        padding: 10px 0 9px;
+        width: 100%;
+        margin-top: -10px;
+        font-size: 3em;
+        span {
+            font-size: .6em;
+        }
+    }
+    .form-group {
+        margin-top: -10px;
+    }
+    input {
+        margin: 0;
+        font-family: 'kanda_b';
+        font-size: 2.5em;
+        &.material {
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0px;
+            box-shadow: none;
+            background: transparent;
+            color: #fff;
+            &:focus {
+                box-shadow: none;
+                border-color: $darkgray;
+            }
+        }
     }
 }
