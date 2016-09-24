@@ -11,6 +11,13 @@
     @media #{$lg} {
         width: 60%;
     }
+    .line_dot {
+        width: 76%;
+        position: absolute;
+        top: 11px;
+        right: 0;
+        left: 0;
+    }
 }
 
 .step-connect_nav ul {
@@ -57,7 +64,6 @@
             &:focus {
                 text-decoration: none;
             }
-
             // &:before {
             //     display: none;
             //     content: '';
@@ -103,21 +109,10 @@
                 //     margin-left: -10px;
                 // }
             }
-             p {
+            p {
                 color: $darkgray;
             }
-
         }
     }
 }
 
-.line_dot {
-    @extend .var_dots;
-    width: 76%;
-    position: absolute;
-    top: 11px;
-    right: 0;
-    left: 0;
-    height: 2px;
-    margin: 0 auto;
-}
