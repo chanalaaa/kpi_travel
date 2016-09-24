@@ -5,7 +5,7 @@ $lightgray30: #ddd;
 $lightgray40: #eee;
 $mainblue: #40C0F0;
 $lightblue: #d5f1fb;
-
+$notired:#DF1C24;
 @mixin blue_gradient($flow) {
     @if $flow=='h' {
         background: rgba(65, 193, 240, 1);
