@@ -109,7 +109,9 @@ span {
 .-no-padding {
     padding: 0 !important;
 }
-
+.-no-paddingRight {
+    padding-right: 0 !important;
+}
 .-center {
     margin: 0 auto;
     text-align: center;

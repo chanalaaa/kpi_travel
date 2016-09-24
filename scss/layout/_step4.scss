@@ -1,6 +1,7 @@
-.result_block{
-	   margin: 4em 0 2em;
+.result_block {
+    margin: 4em 0 2em;
 }
+
 .result_list {
     font-size: 1.6em;
     margin-bottom: .5em;
@@ -30,6 +31,18 @@
         font-family: kanda_b;
         color: #000;
         padding: 15px 0;
+        &.mobile {
+            display: block;
+            @media #{$md} {
+                display: none;
+            }
+        }
+        &.desk {
+            display: none;
+            @media #{$md} {
+                display: block;
+            }
+        }
         p {
             margin: 0em;
         }
@@ -57,6 +70,24 @@
                     margin-right: 3px;
                     font-size: .7em;
                 }
+            }
+        }
+        label {
+            font-family: 'kanda_b';
+            color: $darkgray;
+            font-size: .9em;
+            font-weight: normal;
+            pointer-events: none;
+            position: relative;
+            width: 100%;
+            padding-left: 0px;
+            margin: 0;
+            white-space: nowrap;
+        }
+        .result-detail_list {
+            margin-bottom: 1.5em;
+            .col-xs-12 {
+                margin-bottom: .5em;
             }
         }
     }
