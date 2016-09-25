@@ -6,24 +6,31 @@
      padding: 0 1em;
  }
  
+ .forlgfooter footer {
+     @media screen and (min-width: 1800px) {
+         position: absolute;
+         bottom: 0;
+     }
+ }
+ 
  .footer_block {
      padding-top: 5em;
      img {
          width: 80%;
          max-width: 400px;
-            @media #{$md} {
-            	     width: 60%;
-            }
+         @media #{$md} {
+             width: 60%;
+         }
      }
      &.right {
          float: right;
          text-align: right;
-             padding-top: 2em;
-             padding-bottom: 2em;
-               @media #{$md} {
-                padding-top: 4.7em;
-                 padding-bottom: 0em;
-             }
+         padding-top: 2em;
+         padding-bottom: 2em;
+         @media #{$md} {
+             padding-top: 4.7em;
+             padding-bottom: 0em;
+         }
      }
      p {
          font-family: kanda;
