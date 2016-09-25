@@ -11,7 +11,9 @@ block jsFirst
 block body
 	include ./layout/_header   
 	//- content 
-	.bgPage.home
+	.bgPage
+		img.desk(src="./images/bg01.jpg", alt="")
+		img.mobile(src="./images/bgxs01.jpg", alt="")
 	.row
 		.col-sm-10.col-md-8.-block_center
 			.step_block.block_elements.spacetop
@@ -19,7 +21,7 @@ block body
 						.thankyou_item
 							p.title ขอบคุณ
 							p.
-								ที่ให้ความไว้ใจ บมจ.กรุงไทยพานิชยประกันภัย
+								ที่ให้ความไว้ใจ บมจ.กรุงไทยพานิชยประกันภัย<br>
 								และขอให้ท่านเดินทางโดยสวัสดิภาพ
 						.thankyou_item.insurance
 							p กรมธรรม์ของท่านเลขที่
