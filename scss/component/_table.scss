@@ -206,10 +206,8 @@ th {
 
  @media #{$md} {
     td:hover::after,
-    .ff-fix:hover::after,
     thead th:not(:empty):hover::after,
     td:focus::after,
-    .ff-fix:focus::after,
     thead th:not(:empty):focus::after {
     content: '';
     height: 10000px;
@@ -221,19 +219,19 @@ th {
    
 }
 
-td:hover::after,.ff-fix:hover::after{
+td:hover::after{
     @include blue_gradient('v');
 }
 
-td:focus::after,.ff-fix:focus::after {
+td:focus::after{
     @include blue_gradient('v');
 }
 
-td.title:hover::after,ff-fix:hover::after {
+td.title:hover::after{
     background: transparent;
 }
 
-td.title:focus::after,.ff-fix:focus::after {
+td.title:focus::after{
     background: transparent;
 }
 
