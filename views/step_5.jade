@@ -9,81 +9,82 @@ block title
 block jsFirst
 
 block body
-	include ./layout/_header   
-	//- content 
-	.bgPage
-		img.desk(src="./images/bg01.jpg", alt="")
-		img.mobile(src="./images/bgxs01.jpg", alt="")
-	.row
-		.col-sm-10.col-md-8.-block_center
-			.row
-				.col-sm-5.col-xs-12
-					p.pageHeader CONFIRM <br>AND LET’S GO!
-			.step_block.block_elements
-				//- p.step-title ประกันภัยเดินทาง
-				.step-connect_nav
-					.line_dot
-					ul
-						li
-							a(href="./index.html").circle: span 1
-							p การเดินทาง
-						li
-							a(href="./step_2.html").circle: span 2
-							p แผนคุ้มครอง
-						li
-							a(href="./step_3.html").circle: span 3
-							p ผู้เอาประกัน
-						li.active 
-							a(href="./step_4.html").circle: span 4
-							p ยืนยัน
+	#wrapper
+		include ./layout/_header   
+		//- content 
+		.bgPage
+			img.desk(src="./images/bg01.jpg", alt="")
+			img.mobile(src="./images/bgxs01.jpg", alt="")
+		.row
+			.col-sm-10.col-md-8.-block_center
+				.row
+					.col-sm-5.col-xs-12
+						p.pageHeader CONFIRM <br>AND LET’S GO!
+				.step_block.block_elements
+					//- p.step-title ประกันภัยเดินทาง
+					.step-connect_nav
+						.line_dot
+						ul
+							li
+								a(href="./index.html").circle: span 1
+								p การเดินทาง
+							li
+								a(href="./step_2.html").circle: span 2
+								p แผนคุ้มครอง
+							li
+								a(href="./step_3.html").circle: span 3
+								p ผู้เอาประกัน
+							li.active 
+								a(href="./step_4.html").circle: span 4
+								p ยืนยัน
 
 
-				.payment_block
-					.row
-						.title_bar.col-sm-12
-							p ระบุวิธีการชำระเงิน
-					.row
-						.payoption_block.col-sm-11.col-xs-12.-block_center
-							.row
-								.option_block.col-md-4.col-sm-12
-									.option-inner
-										p ชำระเงินเต็มจำนวน
-										form
-											.radioForm(role='form')
-												.radio
-													input#radioCash(type='radio', name='trip', value='round',checked='')
-													label(for='radioCash')
-														| รายเที่ยว
-								.option_block.col-md-4.col-sm-12
-									.option-inner
-										img.logo(src="./images/ktc_logo.jpg")
-										p แบ่งชำระ
-										form(action="./step_2.html")
-											.radioForm(role='form')
-												.radio
-													input#radioPay1(type='radio', name='trip', value='round',checked='')
-													label(for='radioPay1')
-														| 325.68 บาท x 3 เดือน
-												.radio
-													input#radioPay2(type='radio', name='trip', value='year')
-													label(for='radioPay2')
-														| 155.22 บาท x 6 เดือน
-								.option_block.col-md-4.col-sm-12
-									.option-inner
-										img.logo(src="./images/ktc_logo.jpg")
-										p ใช้คะแนนสะสม
-										form(action="./step_2.html")
-											.radioForm(role='form')
-												.radio
-													input#radioPoint(type='radio', name='trip', value='round',checked='')
-													label(for='radioPoint')
-														| ใช้คะแนนสะสมแทนเงินสด 50,000 คะแนน
-
-								
-							button.btn.btn-primary.-center(type='submit' onclick="location.href='./thankyou.html'") ถัดไป
+					.payment_block
+						.row
+							.title_bar.col-sm-12
+								p ระบุวิธีการชำระเงิน
+						.row
+							.payoption_block.col-sm-11.col-xs-12.-block_center
+								.row
+									.option_block.col-md-4.col-sm-12
+										.option-inner
+											p ชำระเงินเต็มจำนวน
+											form
+												.radioForm(role='form')
+													.radio
+														input#radioCash(type='radio', name='trip', value='round',checked='')
+														label(for='radioCash')
+															| รายเที่ยว
+									.option_block.col-md-4.col-sm-12
+										.option-inner
+											img.logo(src="./images/ktc_logo.jpg")
+											p แบ่งชำระ
+											form(action="./step_2.html")
+												.radioForm(role='form')
+													.radio
+														input#radioPay1(type='radio', name='trip', value='round',checked='')
+														label(for='radioPay1')
+															| 325.68 บาท x 3 เดือน
+													.radio
+														input#radioPay2(type='radio', name='trip', value='year')
+														label(for='radioPay2')
+															| 155.22 บาท x 6 เดือน
+									.option_block.col-md-4.col-sm-12
+										.option-inner
+											img.logo(src="./images/ktc_logo.jpg")
+											p ใช้คะแนนสะสม
+											form(action="./step_2.html")
+												.radioForm(role='form')
+													.radio
+														input#radioPoint(type='radio', name='trip', value='round',checked='')
+														label(for='radioPoint')
+															| ใช้คะแนนสะสมแทนเงินสด 50,000 คะแนน
 
 									
-											
+								button.btn.btn-primary.-center(type='submit' onclick="location.href='./thankyou.html'") ถัดไป
+
+										
+												
 
 
 
@@ -92,8 +93,8 @@ block body
 
 
 
-	//- end content
-	include ./layout/_footer
+		//- end content
+		include ./layout/_footer
 
 
 block js

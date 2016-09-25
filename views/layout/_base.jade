@@ -28,13 +28,11 @@ html
 		link(rel="stylesheet" href="./css/vendors/owl.carousel.css")
 		link(rel="stylesheet" href="./css/style.css")
 
-
+	block var
+		-var currentPage = "home"
 	body
-		#wrapper
-			block var
-				-var currentPage = "home"
-			block body
-				p this content
+		block body
+			p this content
 		
 		block js
 			//- script here

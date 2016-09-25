@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     font-size: 14px;
     font-size: 1.4rem;
     -webkit-font-smoothing: antialiased;
@@ -55,7 +56,7 @@ body {
 }
 
 #wrapper {
-    position: relative;
+    //position: relative;
 }
 
 .bgPage {

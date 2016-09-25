@@ -9,46 +9,47 @@ block title
 block jsFirst
 
 block body
-	include ./layout/_header   
-	//- content 
-	.bgPage
-		img.desk(src="./images/bg01.jpg", alt="")
-		img.mobile(src="./images/bgxs01.jpg", alt="")
-	.row
-		.col-sm-10.col-md-8.-block_center
-			.step_block.block_elements.spacetop
-				.thankyou_block
-						.thankyou_item
-							p.title ขอบคุณ
-							p.
-								ที่ให้ความไว้ใจ บมจ.กรุงไทยพานิชยประกันภัย<br>
-								และขอให้ท่านเดินทางโดยสวัสดิภาพ
-						.thankyou_item.insurance
-							p กรมธรรม์ของท่านเลขที่
-							p#insuranceId ITA02-0144-13-000029
-						.thankyou_item
-							p
-								| บริษัทฯ จะจัดส่งกรมธรรม์และรายละเอียดเงื่อนไขความคุ้มครองให้ทางอีเมลท่ีท่านแจ้งไว้ 
-								| หรือท่านสามารถคลิกดาวน์โหลดกรมธรรม์ 
-								a(href="#") ดาวน์โหลดเงื่อนไขความคุ้มครอง
-								|  ติดต่อสอบถามเพิ่มเติม โทร. 0 2624 1111 ต่อ 4774
-						.thankyou_item
-							button.btn.btn-primary(onclick="location.href='./index.html'") ซื้อประกันเพิ่มเติม
-							button.btn.btn-primary.gray() ออก
-							
+	#wrapper
+		include ./layout/_header   
+		//- content 
+		.bgPage
+			img.desk(src="./images/bg01.jpg", alt="")
+			img.mobile(src="./images/bgxs01.jpg", alt="")
+		.row
+			.col-sm-10.col-md-8.-block_center
+				.step_block.block_elements.spacetop
+					.thankyou_block
+							.thankyou_item
+								p.title ขอบคุณ
+								p.
+									ที่ให้ความไว้ใจ บมจ.กรุงไทยพานิชยประกันภัย<br>
+									และขอให้ท่านเดินทางโดยสวัสดิภาพ
+							.thankyou_item.insurance
+								p กรมธรรม์ของท่านเลขที่
+								p#insuranceId ITA02-0144-13-000029
+							.thankyou_item
+								p
+									| บริษัทฯ จะจัดส่งกรมธรรม์และรายละเอียดเงื่อนไขความคุ้มครองให้ทางอีเมลท่ีท่านแจ้งไว้ 
+									| หรือท่านสามารถคลิกดาวน์โหลดกรมธรรม์ 
+									a(href="#") ดาวน์โหลดเงื่อนไขความคุ้มครอง
+									|  ติดต่อสอบถามเพิ่มเติม โทร. 0 2624 1111 ต่อ 4774
+							.thankyou_item
+								button.btn.btn-primary(onclick="location.href='./index.html'") ซื้อประกันเพิ่มเติม
+								button.btn.btn-primary.gray() ออก
+								
 
-									
-											
-
-
-
+										
+												
 
 
 
 
 
-	//- end content
-	include ./layout/_footer
+
+
+
+		//- end content
+		include ./layout/_footer
 
 
 block js
