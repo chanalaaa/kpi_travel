@@ -82,13 +82,13 @@ block body
 										//- 	.group
 										//- 		input(type='text' required)
 										//- 		label ไปยังประเทศ
-										button.btn.btn-primary.-center(type='submit') ถัดไป
+										button.btn.btn-primary.-center(type='submit' onclick="location.href='./step_2.html'") ถัดไป
 
 
 
 								.tab-pane#sec_out
 									.tab-pane.active#sec_in
-										form
+										form(action="./step_2.html")
 											.radioForm(role='form')
 												.radio.radio-inline
 													input#radioRound(type='radio', name='trip', value='round',checked='')

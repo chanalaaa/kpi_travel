@@ -76,8 +76,17 @@ jQuery(document).ready(function($) {
         };
 
     };
-
     firefoxFix();
+
+    /* custom style td */
+    var tableHeight = $(".tablelist").height();
+    $('td').hover(function(){
+      var col = $(this).parent().children().index($(this));
+      var row = $(this).parent().parent().children().index($(this).parent());
+      //alert('Row: ' + row + ', Column: ' + col);
+      $( ".tablelist table tbody td:nth-child("+(col+1)+")").toggleClass('hover');
+      $( ".tablelist table thead td:nth-child("+(col+1)+")").toggleClass('hover');
+});
 
 
 });

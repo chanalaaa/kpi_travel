@@ -156,9 +156,9 @@ a.read_more {
     }
     .btn-primary {
         @media #{$md} {
-            color: $darkgray;
+            color: $lightgray30;
             background: #fff;
-            border: 1px solid $lightgray20;
+            border: 1px solid $lightgray30;
             font-size: 1.3em;
             padding: 0 20px;
             line-height: 1.2em;
@@ -198,7 +198,12 @@ th {
     padding: 10px;
     position: relative;
     outline: 0;
+    &.hover{
+        color: #fff;
+    }
 }
+
+
  @media #{$md} {
     td:hover::after,
     .ff-fix:hover::after,
@@ -248,3 +253,31 @@ tbody th:focus::before {
 }
 
  }
+
+
+/* hover Highlight*/
+
+td:nth-child(1){
+     color: $darkgray !important;
+}
+
+td,
+th,
+{
+    &.hover {
+        color: #fff;
+        a.read_more {
+            color: #fff;
+        }
+        .plan-header_text{
+            p,span{
+                color: #fff;
+            }
+        }
+        .btn-primary{
+            color: $darkgray !important;
+             border: none !important;
+        }
+    }
+}
+
