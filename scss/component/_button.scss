@@ -1,0 +1,15 @@
+    .btn-primary {
+        margin: 2em auto 0;
+        font-family: 'kanda_b';
+        border: none;
+        font-size: 2em;
+        padding: 0px 50px;
+        @include blue_gradient('h');
+        &:hover {
+            opacity: .7;
+        }
+        &.gray {
+            background: $lightgray40;
+            color: $darkgray;
+        }
+    }
