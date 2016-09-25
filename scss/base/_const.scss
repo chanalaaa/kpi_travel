@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    position: relative;
+    //position: relative;
     font-size: 14px;
     font-size: 1.4rem;
     -webkit-font-smoothing: antialiased;
@@ -61,27 +61,20 @@ body {
 
 .bgPage {
     position: fixed;
-    //position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    height: auto;
-    width: auto;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
     z-index: -999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     img {
-        position: fixed;
-        width: 100%;
-        min-height: 100%;
-        min-width: 100%;
-        height: auto;
-        width: auto;
-        top: 50%;
-        left: 63%;
-        transform: translate(-50%, -50%);
-        //background-position: 85% 100% !important;
-        //background-position: 40% 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        min-width: 50%;
+        min-height: 50%;
     }
 }
 

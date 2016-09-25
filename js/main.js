@@ -35,11 +35,12 @@ jQuery(document).ready(function($) {
 
     });
     $(".ico_datestart").on("click", function() {
-        $('input[name="startdate"]').trigger("click");
+        $(this).parent().find('input').trigger("click");
     })
     $(".ico_dateend").on("click", function() {
-        $('input[name="enddate"]').trigger("click");
+         $(this).parent().find('input').trigger("click");
     })
+
 
     $('input[name="startdate"]').on('apply.daterangepicker', function(ev, picker) {
         console.log("startdate: " + picker.startDate.format('YYYY-MM-DD'));
@@ -64,10 +65,8 @@ jQuery(document).ready(function($) {
     var tableHeight = $(".tablelist").height();
     $('td').hover(function(){
       var col = $(this).parent().children().index($(this));
-      var row = $(this).parent().parent().children().index($(this).parent());
-      //alert('Row: ' + row + ', Column: ' + col);
-      $( ".tablelist table tbody td:nth-child("+(col+1)+")").toggleClass('hover');
-      $( ".tablelist table thead td:nth-child("+(col+1)+")").toggleClass('hover');
+      //var row = $(this).parent().parent().children().index($(this).parent());
+      $( ".tablelist table td:nth-child("+(col+1)+")").toggleClass('hover');
 });
 
 

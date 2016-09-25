@@ -6,7 +6,7 @@
         padding: 0px 50px;
         @include blue_gradient('h');
         &:hover {
-            opacity: .7;
+            opacity: .8;
         }
         &.gray {
             background: $lightgray40;

@@ -4,6 +4,7 @@
     background-size: 3px 1px;
     background-repeat: repeat-x;
 }
+.tablelist,.swipe{
 
 table {
     td {
@@ -70,7 +71,7 @@ table {
         }
     }
 }
-
+}
 .plan_block.swipe {
     display: block;
     @media #{$md} {
@@ -254,28 +255,30 @@ tbody th:focus::before {
 
 
 /* hover Highlight*/
-
-td:nth-child(1){
-     color: $darkgray !important;
-}
-
-td,
-th,
-{
-    &.hover {
-        color: #fff;
-        a.read_more {
-            color: #fff;
-        }
-        .plan-header_text{
-            p,span{
+.tablelist{
+     @media #{$md} {
+    td:nth-child(1){
+         color: $darkgray !important;
+    }
+        td,
+        th,
+        {
+            &.hover {
                 color: #fff;
+                a.read_more {
+                    color: #fff;
+                }
+                .plan-header_text{
+                    p,span{
+                        color: #fff;
+                    }
+                }
+                .btn-primary{
+                    color: $darkgray !important;
+                     border: none !important;
+                }
             }
         }
-        .btn-primary{
-            color: $darkgray !important;
-             border: none !important;
-        }
     }
-}
 
+}
