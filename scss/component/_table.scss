@@ -282,3 +282,9 @@ tbody th:focus::before {
     }
 
 }
+
+.tablelist_in table tbody tr td:first-child{
+    @media #{$md} {
+        width: 55%;
+    }
+}
