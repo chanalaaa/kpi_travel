@@ -66,12 +66,12 @@ block body
 												option Bird
 												option Thee
 										.form-group.inline_field
-											label เดินทางไป
+											label วันออกเดินทาง
 											.datepick
 												input.form-control.material(type='text', name='startdate')
 												i.ico_datestart
 										.form-group.inline_field
-											label เดินทางกลับ
+											label วันสิ้นสุดการเดินทาง
 											.datepick
 												input.form-control.material(type='text', name='enddate')
 												i.ico_dateend
@@ -82,21 +82,21 @@ block body
 										//- 	.group
 										//- 		input(type='text' required)
 										//- 		label ไปยังประเทศ
-										button.btn.btn-primary.-center(type='submit' onclick="location.href='./step_2.html'") ถัดไป
+										button.btn.btn-primary.-center(type='submit') ถัดไป
 
 
 
 								.tab-pane#sec_out
 									.tab-pane.active#sec_in
-										form(action="./step_2.html")
+										form(action="./step_2_in.html")
 											.radioForm(role='form')
 												.radio.radio-inline
-													input#radioRound(type='radio', name='trip', value='round',checked='')
-													label(for='radioRound')
+													input#radioRound_in(type='radio', name='trip', value='round',checked='')
+													label(for='radioRound_in')
 														| รายเที่ยว
 												.radio.radio-inline
-													input#radioYear(type='radio', name='trip', value='year')
-													label(for='radioYear')
+													input#radioYear_in(type='radio', name='trip', value='year')
+													label(for='radioYear_in')
 														| รายปี
 											//- .form-group.inline_field
 											//- 	label(for='usr') Name:
@@ -114,12 +114,12 @@ block body
 													option Bird
 													option Thee
 											.form-group.inline_field
-												label เดินทางไป
+												label วันออกเดินทาง
 												.datepick
 													input.form-control.material(type='text', name='startdate')
 													i.ico_datestart
 											.form-group.inline_field
-												label เดินทางกลับ
+												label วันสิ้นสุดการเดินทาง
 												.datepick
 													input.form-control.material(type='text', name='enddate')
 													i.ico_dateend
@@ -130,7 +130,7 @@ block body
 											//- 	.group
 											//- 		input(type='text' required)
 											//- 		label ไปยังประเทศ
-											button.btn.btn-primary.-center(type='submit' onclick="location.href='./step_2.html'") ถัดไป
+											button.btn.btn-primary.-center(type='submit') ถัดไป
 
 
 		//- end content
