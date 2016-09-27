@@ -104,8 +104,11 @@ a,
 span {
     font-family: 'kanda';
     font-size: 22px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0px;
     line-height: 20px;
+    @media #{$md}{
+        letter-spacing: 1px;
+    }
 }
 
 .container {
