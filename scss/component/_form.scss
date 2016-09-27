@@ -1,316 +1,328 @@
-    // dropdown
-    button.dropdown-toggle {
-        width: 100%;
-        text-align: left;
-        margin-left: -4px;
+// dropdown
+button.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    margin-left: -4px;
+}
+
+.caret {
+    border-top: none;
+    margin-top: -10px;
+    margin-right: 5px;
+    &:before {
+        font-family: 'fontAwesome';
+        content: "\f107";
+        font-size: 16px;
     }
-    
-    .caret {
-        border-top: none;
-        margin-top: -10px;
-        margin-right: 5px;
-        &:before {
-            font-family: 'fontAwesome';
-            content: "\f107";
-            font-size: 16px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin-top: -10px;
+    margin-right: 5px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option,
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    font-family: kanda_b;
+}
+
+.bootstrap-select>.dropdown-toggle {
+    padding-right: 0px;
+    padding: 6px 23px 6px 6px;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover,
+.open>.dropdown-toggle.btn-default:active,
+.btn.active,
+.btn:active {
+    box-shadow: none;
+}
+
+// input
+input {
+    font-size: 15px;
+    margin: 0;
+    &.material {
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $lightgray;
+        border-radius: 0px;
+        box-shadow: none;
+        background: transparent;
+        color: #000;
+        &:focus {
+            box-shadow: none;
+            border-color: $mainblue;
         }
     }
-    
-    .bootstrap-select.btn-group .dropdown-toggle .caret {
-        margin-top: -10px;
-        margin-right: 5px;
+}
+
+label {
+    max-width: none;
+}
+
+.radioForm {
+    padding: 1em 0 2.5em;
+}
+
+.radio input[type=radio] {
+    cursor: pointer;
+}
+
+.inline_field {
+    &.form-group {
+        & > div.col-xs-8 {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
-    
-    .bootstrap-select.btn-group .dropdown-toggle .filter-option,
-    .bootstrap-select.btn-group .dropdown-menu li a span.text {
-        font-family: kanda_b;
+    .form-control {
+        width: 100%;
+        display: inline-block;
+        //margin-left: -4px;
+        @media #{$md} {
+            width: 65%;
+        }
     }
-    
-    .bootstrap-select>.dropdown-toggle {
-        padding-right: 0px;
-        padding: 6px 23px 6px 6px;
+    label {
+        display: inline-block;
+        line-height: 34px;
+        padding-right: 0 !important;
+        width: 41.66666667%;
+        @media #{$md} {
+            width: 33.33333333%;
+        }
     }
-    
-    .btn-group.open .dropdown-toggle {
-        box-shadow: none;
-    }
-    
-    .open>.dropdown-toggle.btn-default:focus,
-    .open>.dropdown-toggle.btn-default:hover,
-    .open>.dropdown-toggle.btn-default:active,.btn.active, .btn:active {
-        box-shadow: none;
-    }
-    
-    // input
-    input {
-        font-size: 15px;
-        margin: 0;
-        &.material {
-            padding: 10px 10px 10px 5px;
+    &.materialLabel {
+        .group {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            display: inline-block;
+            @media #{$md} {
+                width: 100%;
+            }
+        }
+        input {
+            padding: 8px 10px 8px 5px;
             display: block;
             width: 100%;
             border: none;
             border-bottom: 1px solid $lightgray;
             border-radius: 0px;
             box-shadow: none;
-            background: transparent;
-            color: #000;
             &:focus {
-                box-shadow: none;
+                outline: none;
                 border-color: $mainblue;
+                & ~ label {
+                    top: -20px;
+                    font-size: 1.4em;
+                    color: $darkgray;
+                    @media #{$md} {
+                        top: -28px;
+                    }
+                }
             }
-        }
-    }
-    
-    label {
-        max-width: none;
-    }
-    
-    .radioForm {
-        padding: 1em 0 2.5em;
-    }
-    
-    .radio input[type=radio] {
-        cursor: pointer;
-    }
-    
-    .inline_field {
-        &.form-group {
-            & > div.col-xs-8 {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-        .form-control {
-            width: 100%;
-            display: inline-block;
-            //margin-left: -4px;
-            @media #{$md} {
-                width: 65%;
+            &:valid {
+                outline: none;
+                & ~ label {
+                    top: -20px;
+                    font-size: 1.4em;
+                    color: $darkgray;
+                    @media #{$md} {
+                        top: -28px;
+                    }
+                }
             }
         }
         label {
-            display: inline-block;
-            line-height: 34px;
-            padding-right: 0 !important;
-            width: 41.66666667%;
-            @media #{$md} {
-                width: 33.33333333%;
-            }
-        }
-        &.materialLabel {
-            .group {
-                position: relative;
-                margin: 0;
-                width: 100%;
-                display: inline-block;
-                @media #{$md} {
-                    width: 100%;
-                }
-            }
-            input {
-                padding: 8px 10px 8px 5px;
-                display: block;
-                width: 100%;
-                border: none;
-                border-bottom: 1px solid $lightgray;
-                border-radius: 0px;
-                box-shadow: none;
-                &:focus {
-                    outline: none;
-                    border-color: $mainblue;
-                    & ~ label {
-                        top: -20px;
-                        font-size: 1.4em;
-                        color: $darkgray;
-                        @media #{$md} {
-                            top: -28px;
-                        }
-                    }
-                }
-                &:valid {
-                    outline: none;
-                    & ~ label {
-                        top: -20px;
-                        font-size: 1.4em;
-                        color: $darkgray;
-                        @media #{$md} {
-                            top: -28px;
-                        }
-                    }
-                }
-            }
-            label {
-                font-family: 'kanda_b';
-                color: $lightgray20;
-                font-size: 1.7em;
-                font-weight: normal;
-                position: absolute;
-                pointer-events: none;
-                top: 5px;
-                transition: 0.2s ease all;
-                width: 100%;
-                padding-left: 10px;
-            }
-            &.required {
-                input {
-                    border-bottom: 1px solid $notired;
-                    &:focus {
-                        border-bottom: 1px solid $lightgray;
-                        label {
-                            color: $lightgray20;
-                        }
-                    }
-                    &:valid {
-                        border-bottom: 1px solid $lightgray;
-                        label {
-                            color: $lightgray20;
-                        }
-                    }
-                }
-                label {
-                    color: $notired;
-                }
-            }
-        }
-        .selectpicker {
-            width: 100%;
-            display: inline-block;
-            @media #{$md} {
-                width: 65%;
-            }
-        }
-        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-            width: 100%;
-            display: inline-block;
-        }
-    }
-    
-    .tab-pane {
-        .inline_field {
-            .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-                width: 100%;
-                display: inline-block;
-                @media #{$md} {
-                    width: 65%;
-                }
-            }
-        }
-        &.materialLabel {
-            .group {
-                position: relative;
-                margin: 0;
-                width: 100%;
-                display: inline-block;
-                @media #{$md} {
-                    width: 65%;
-                }
-            }
-        }
-    }
-    
-    .text-resultDate {
-        p {
-            background-color: $lightgray30;
-            padding: 10px 25px;
-            display: inline-block;
-            border-radius: 4px;
             font-family: 'kanda_b';
-            float: right;
-            margin-left: -4px;
-            @media #{$md} {
-                float: none;
-            }
+            color: $lightgray20;
+            font-size: 1.7em;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            top: 5px;
+            transition: 0.2s ease all;
+            width: 100%;
+            padding-left: 10px;
         }
     }
-    
-    p.text-resultDate {
-        background-color: $lightgray30;
-        padding: 10px 25px;
-        display: inline-block;
-        border-radius: 4px;
-        font-family: 'kanda_b';
-        margin-left: -4px;
-    }
-    
-    // datepick
-    .datepick {
-        position: relative;
-        display: inline-block;
+    .selectpicker {
         width: 100%;
         display: inline-block;
         @media #{$md} {
             width: 65%;
         }
-        input.form-control {
-            display: inline-block;
+    }
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.tab-pane {
+    .inline_field {
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
             width: 100%;
-            margin-left: -4px;
-        }
-        i {
-            position: absolute;
-            font-style: normal;
-            bottom: 5px;
-            right: 9px;
-            cursor: pointer;
-            color: $darkgray;
-            font-size: 18px;
-            float: right;
+            display: inline-block;
             @media #{$md} {
-                float: none;
-            }
-            &:before {
-                font-family: 'fontAwesome';
-                content: "\f073";
-                font-size: 16px;
+                width: 65%;
             }
         }
     }
-    
-    .infomation_block {
-        form {
-            .inline_field {
-                margin-bottom: .8em;
-                [class^="col-"] {
-                    position: relative;
-                }
+    &.materialLabel {
+        .group {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            display: inline-block;
+            @media #{$md} {
+                width: 65%;
+            }
+        }
+    }
+}
+
+.text-resultDate {
+    p {
+        background-color: $lightgray30;
+        padding: 10px 25px;
+        display: inline-block;
+        border-radius: 4px;
+        font-family: 'kanda_b';
+        float: right;
+        margin-left: -4px;
+        @media #{$md} {
+            float: none;
+        }
+    }
+}
+
+p.text-resultDate {
+    background-color: $lightgray30;
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 4px;
+    font-family: 'kanda_b';
+    margin-left: -4px;
+}
+
+// datepick
+.datepick {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    display: inline-block;
+    @media #{$md} {
+        width: 65%;
+    }
+    input.form-control {
+        display: inline-block;
+        width: 100%;
+        margin-left: -4px;
+    }
+    i {
+        position: absolute;
+        font-style: normal;
+        bottom: 5px;
+        right: 9px;
+        cursor: pointer;
+        color: $darkgray;
+        font-size: 18px;
+        float: right;
+        @media #{$md} {
+            float: none;
+        }
+        &:before {
+            font-family: 'fontAwesome';
+            content: "\f073";
+            font-size: 16px;
+        }
+    }
+}
+
+.infomation_block {
+    form {
+        .inline_field {
+            margin-bottom: .8em;
+            [class^="col-"] {
+                position: relative;
+            }
+            @media #{$md} {
+                margin-bottom: 1.7em;
+            }
+            label.top {
+                font-family: 'kanda_b';
+                color: $darkgray;
+                font-size: 1.4em;
+                font-weight: normal;
+                pointer-events: none;
+                position: relative;
+                width: 100%;
+                padding-left: 25px;
+                margin: 0;
                 @media #{$md} {
-                    margin-bottom: 1.7em;
-                }
-                label.top {
-                    font-family: 'kanda_b';
-                    color: $darkgray;
-                    font-size: 1.4em;
-                    font-weight: normal;
-                    pointer-events: none;
-                    position: relative;
-                    width: 100%;
-                    padding-left: 25px;
-                    margin: 0;
-                    @media #{$md} {
-                        position: absolute;
-                        top: -1.5em;
-                        left: 0;
-                    }
+                    position: absolute;
+                    top: -1.5em;
+                    left: 0;
                 }
             }
         }
-        .text-resultDate p {
-            padding: 10px;
-            float: left;
+    }
+    .text-resultDate p {
+        padding: 10px;
+        float: left;
+    }
+}
+
+.form-space {
+    margin: 1.2em 0 1.5em!important;
+    @media #{$md} {
+        margin: 2em 0 !important;
+    }
+}
+
+.form-space2 {
+    margin: 1.2em 0 1.5em!important;
+    @media #{$md} {
+        margin: 3em 0 !important;
+    }
+}
+
+// validation style
+.form-group {
+    &.has-error {
+        input {
+            border-bottom: 1px solid $notired;
+            &:focus {
+                border-bottom: 1px solid $lightgray;
+                label {
+                    color: $lightgray20;
+                }
+            }
+            &:valid {
+                border-bottom: 1px solid $lightgray;
+                label {
+                    top: -20px;
+                    color: $lightgray20;
+                }
+            }
+            &:invalid {
+                & ~ label {
+                    top: -20px;
+                }
+            }
+        }
+        label {
+            color: $notired;
         }
     }
-    
-    .form-space {
-        margin: 1.2em 0 1.5em!important;
-        @media #{$md} {
-            margin: 2em 0 !important;
-        }
-    }
-    
-    .form-space2 {
-        margin: 1.2em 0 1.5em!important;
-        @media #{$md} {
-            margin: 3em 0 !important;
-        }
-    }
+}

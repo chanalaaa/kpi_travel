@@ -66,7 +66,6 @@ jQuery(document).ready(function($) {
             });
     }
 
-    /*sticy header table (sm)*/
 
 
 
