@@ -74,13 +74,16 @@ table {
 }
 .plan_block.swipe {
     display: block;
+    position: relative;
+    background: #fff;
     @media #{$md} {
         display: none;
     }
     .plan-header {
+        display: none;
         position: relative;
         height: 9em;
-        display: table;
+        //display: table;
         width: 100%;
         @include blue_gradient('v');
         .plan-header_text {
@@ -89,6 +92,24 @@ table {
             padding-left: 20%;
         }
     }
+    .stickyHeader{
+        position: relative;
+        .plan-header {
+            display: table;
+        }
+        &.fixed{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 93%;
+                right: 0;
+                margin: 0 auto;
+                z-index: 9;
+                @media screen and (min-width: 500px){
+                    width: 95%;
+                }
+            }
+        }
 }
 
 .plan-table {
@@ -96,6 +117,9 @@ table {
     display: block;
     width: 100%;
     text-align: center;
+    &.spacetop{
+        margin-top: 28%;
+    }
 }
 
 a.read_more {

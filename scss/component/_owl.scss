@@ -35,6 +35,12 @@
         position: absolute;
         top: 7em;
         right: 15%;
+        display: none !important;
+        pointer-events: none;
+    }
+    
+    .stickyHeader .owl-dots {
+        display: block !important;
     }
     
     .owl-dots .owl-dot {
@@ -57,4 +63,16 @@
     .owl-dots .owl-dot.active span,
     .owl-dots .owl-dot:hover span {
         background: #fff;
+    }
+    
+    .animated {
+        visibility: hidden;
+        -webkit-animation-duration: 500 ms;
+        animation-duration: 500 ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+    .owl-animated-out {
+        z-index: 1
     }

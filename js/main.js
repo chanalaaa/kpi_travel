@@ -2,12 +2,17 @@ jQuery(document).ready(function($) {
     /* table carousel */
     $('.owl-carousel').owlCarousel({
         navContainer: '#customNav',
+        mouseDrag: false,
+        touchDrag: false,
+        //animateOut: 'fadeOut',
+        //smartSpeed:150,
         responsive: {
             0: {
                 items: 1
             }
         }
     })
+
 
     $(".owl-carousel").each(function() {
         var $this = $(this);
@@ -38,7 +43,7 @@ jQuery(document).ready(function($) {
         $(this).parent().find('input').trigger("click");
     })
     $(".ico_dateend").on("click", function() {
-         $(this).parent().find('input').trigger("click");
+        $(this).parent().find('input').trigger("click");
     })
 
 
@@ -61,13 +66,32 @@ jQuery(document).ready(function($) {
             });
     }
 
+    /*sticy header table (md)*/
+
+
+    var stickyHeaderPosition = $('.stickyHeader').offset();
+    var header = $(".stickyHeader");
+    var planTable = $(".plan-table");
+    var fromTop = $("body").scrollTop();
+    $(window).on("scroll", function(e) {
+        fromTop = $("body").scrollTop();
+        if (fromTop > stickyHeaderPosition.top) {
+            header.addClass("fixed");
+            planTable.addClass("spacetop");
+        } else {
+            header.removeClass("fixed");
+            planTable.removeClass("spacetop");
+        }
+
+    });
+
     /* custom style td */
     var tableHeight = $(".tablelist").height();
-    $('td').hover(function(){
-      var col = $(this).parent().children().index($(this));
-      //var row = $(this).parent().parent().children().index($(this).parent());
-      $( ".tablelist table td:nth-child("+(col+1)+")").toggleClass('hover');
-});
+    $('td').hover(function() {
+        var col = $(this).parent().children().index($(this));
+        //var row = $(this).parent().parent().children().index($(this).parent());
+        $(".tablelist table td:nth-child(" + (col + 1) + ")").toggleClass('hover');
+    });
 
 
 });
