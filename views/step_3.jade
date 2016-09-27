@@ -16,7 +16,7 @@ block body
 			img.desk(src="./images/bg01.jpg", alt="")
 			img.mobile(src="./images/bgxs01.jpg", alt="")
 		.row
-			.col-sm-10.col-md-8.-block_center
+			.col-sm-10.col-md-8.-block_center.main_block
 				.row
 					.col-sm-5.col-xs-12
 						p.pageHeader INSURED<br>INFORMATION
@@ -79,7 +79,7 @@ block body
 											i.fa.fa-times-circle
 											| ลบ
 									p.ps *กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง
-									form(action="./step_4.html")
+									form(action="./step_4.html" data-toggle="validator")
 										.form-group.inline_field
 											.row
 												.col-sm-6.-no-padding

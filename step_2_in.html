@@ -39,7 +39,7 @@
       </header>
       <div class="bgPage"><img src="./images/bg01.jpg" alt="" class="desk"><img src="./images/bgxs01.jpg" alt="" class="mobile"></div>
       <div class="row">
-        <div class="col-sm-10 col-md-8 -block_center">
+        <div class="col-sm-10 col-md-8 -block_center main_block">
           <div class="row">
             <div class="col-sm-5 col-xs-8">
               <p class="pageHeader">Pick the Plan that Fits You</p>
@@ -94,7 +94,40 @@
               </div>
             </div>
             <div class="plan_block swipe">
-              <div id="customNav" class="customNavigation"><i class="prev fa fa-chevron-circle-left"></i><i class="next fa fa-chevron-circle-right"></i></div>
+              <div class="stickyHeader">
+                <div id="customNav" class="customNavigation"><i class="prev fa fa-chevron-circle-left"></i><i class="next fa fa-chevron-circle-right"></i></div>
+                <div class="owl-carousel disableDrag">
+                  <div class="item">
+                    <div class="plan-header">
+                      <div class="plan-header_text">
+                        <p>วีซ่า<span>432 บาท</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="plan-header">
+                      <div class="highlightTag"></div>
+                      <div class="plan-header_text">
+                        <p>วีซ่าพลัส<span>641 บาท</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="plan-header">
+                      <div class="plan-header_text">
+                        <p>วีซ่าอีลีท<span>915 บาท</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="plan-header">
+                      <div class="plan-header_text">
+                        <p>วีซ่าคอมพรีเฮนซีพ<span>1,423 บาท</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="owl-carousel">
                 <div class="item">
                   <div class="plan-header">
@@ -223,7 +256,35 @@
         </div>
       </footer>
     </div>
+    <script>
+      // sticy header table (sm)
+      var header = $(".stickyHeader");
+      var stickyHeaderPosition = header.offset();
+      var planTable = $(".plan-table");
+      var fromTop = $("html").scrollTop();
+      var flag = 1;
+      $(window).on("scroll", function(e)
+      {
+        if (flag)
+        {
+          stickyHeaderPosition = header.offset();
+          flag -= 1;
+        }
+        fromTop = $("body").scrollTop();
+        if (fromTop > (stickyHeaderPosition.top))
+        {
+          header.addClass("fixed");
+          planTable.addClass("spacetop");
+        }
+        else
+        {
+          header.removeClass("fixed");
+          planTable.removeClass("spacetop");
+        }
+      });
+    </script>
     <script type="text/javascript" src="./js/vendors/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="./js/vendors/validator.min.js"></script>
     <script type="text/javascript" src="./js/vendors/moment.min.js"></script>
     <script type="text/javascript" src="./js/vendors/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/vendors/owl.carousel.min.js"></script>

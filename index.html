@@ -39,7 +39,7 @@
       </header>
       <div class="bgPage"><img src="./images/bg01.jpg" alt="" class="desk"><img src="./images/bgxs01.jpg" alt="" class="mobile"></div>
       <div class="row">
-        <div class="col-sm-10 col-md-8 -block_center">
+        <div class="col-sm-10 col-md-8 -block_center main_block">
           <div class="row">
             <div class="col-sm-5 col-xs-8">
               <p class="pageHeader">travel information</p>
@@ -71,17 +71,17 @@
               <div class="row">
                 <div class="tab-content clearfix col-md-10 col-sm-11 col-xs-12 -block_center">
                   <div id="sec_in" class="tab-pane active">
-                    <form action="./step_2.html">
+                    <form action="./step_2.html" data-toggle="validator">
                       <div role="form" class="radioForm">
-                        <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked=""><label for="radioRound">รายเที่ยว</label></div>
-                        <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year"><label for="radioYear">รายปี</label></div>
+                        <div class="radio radio-inline"><input id="radioRound" type="radio" name="trip" value="round" checked="" required><label for="radioRound">รายเที่ยว</label></div>
+                        <div class="radio radio-inline"><input id="radioYear" type="radio" name="trip" value="year" required><label for="radioYear">รายปี</label></div>
                       </div>
                       <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
                       <div class="form-group inline_field"><label>วันออกเดินทาง</label>
-                        <div class="datepick"><input type="text" name="startdate" class="form-control material"><i class="ico_datestart"></i></div>
+                        <div class="datepick"><input type="text" name="startdate" required class="form-control material"><i class="ico_datestart"></i></div>
                       </div>
                       <div class="form-group inline_field"><label>วันสิ้นสุดการเดินทาง</label>
-                        <div class="datepick"><input type="text" name="enddate" class="form-control material"><i class="ico_dateend"></i></div>
+                        <div class="datepick"><input type="text" name="enddate" required class="form-control material"><i class="ico_dateend"></i></div>
                       </div>
                       <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
                         <p>10</p>
@@ -89,18 +89,18 @@
                   </div>
                   <div id="sec_out" class="tab-pane">
                     <div id="sec_in" class="tab-pane active">
-                      <form action="./step_2_in.html">
+                      <form action="./step_2_in.html" data-toggle="validator">
                         <div role="form" class="radioForm">
-                          <div class="radio radio-inline"><input id="radioRound_in" type="radio" name="trip" value="round" checked=""><label for="radioRound_in">รายเที่ยว</label></div>
-                          <div class="radio radio-inline"><input id="radioYear_in" type="radio" name="trip" value="year"><label for="radioYear_in">รายปี</label></div>
+                          <div class="radio radio-inline"><input id="radioRound_in" type="radio" name="trip" value="round" checked="" required><label for="radioRound_in">รายเที่ยว</label></div>
+                          <div class="radio radio-inline"><input id="radioYear_in" type="radio" name="trip" value="year" required><label for="radioYear_in">รายปี</label></div>
                         </div>
                         <div class="form-group inline_field"><label>จากประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
                         <div class="form-group inline_field"><label>ไปยังประเทศ</label><select class="selectpicker"><option>Car</option><option>Bird</option><option>Thee</option></select></div>
                         <div class="form-group inline_field"><label>วันออกเดินทาง</label>
-                          <div class="datepick"><input type="text" name="startdate" class="form-control material"><i class="ico_datestart"></i></div>
+                          <div class="datepick"><input type="text" name="startdate" required class="form-control material"><i class="ico_datestart"></i></div>
                         </div>
                         <div class="form-group inline_field"><label>วันสิ้นสุดการเดินทาง</label>
-                          <div class="datepick"><input type="text" name="enddate" class="form-control material"><i class="ico_dateend"></i></div>
+                          <div class="datepick"><input type="text" name="enddate" required class="form-control material"><i class="ico_dateend"></i></div>
                         </div>
                         <div class="form-group inline_field text-resultDate"><label>จำนวนวันเดินทาง</label>
                           <p>10</p>
@@ -123,6 +123,7 @@
       </footer>
     </div>
     <script type="text/javascript" src="./js/vendors/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="./js/vendors/validator.min.js"></script>
     <script type="text/javascript" src="./js/vendors/moment.min.js"></script>
     <script type="text/javascript" src="./js/vendors/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/vendors/owl.carousel.min.js"></script>

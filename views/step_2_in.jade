@@ -16,7 +16,7 @@ block body
 			img.desk(src="./images/bg01.jpg", alt="")
 			img.mobile(src="./images/bgxs01.jpg", alt="")
 		.row
-			.col-sm-10.col-md-8.-block_center
+			.col-sm-10.col-md-8.-block_center.main_block
 				.row
 					.col-sm-5.col-xs-8
 						p.pageHeader Pick the Plan that Fits You
@@ -61,9 +61,32 @@ block body
 											p รวม 10 วัน
 
 					.plan_block.swipe
-						#customNav.customNavigation
-							i.prev.fa.fa-chevron-circle-left
-							i.next.fa.fa-chevron-circle-right
+						.stickyHeader
+							#customNav.customNavigation
+								i.prev.fa.fa-chevron-circle-left
+								i.next.fa.fa-chevron-circle-right
+							.owl-carousel.disableDrag
+								.item
+									.plan-header
+										.plan-header_text
+											p วีซ่า
+												span 432 บาท
+								.item
+									.plan-header
+										.highlightTag
+										.plan-header_text
+											p วีซ่าพลัส
+												span 641 บาท
+								.item
+									.plan-header
+										.plan-header_text
+											p วีซ่าอีลีท
+												span 915 บาท
+								.item
+									.plan-header
+										.plan-header_text
+											p วีซ่าคอมพรีเฮนซีพ
+												span 1,423 บาท
 						.owl-carousel
 							.item
 								.plan-header
@@ -165,4 +188,25 @@ block body
 
 
 block js
-	//-script here
+		script.
+			// sticy header table (sm)
+			var header = $(".stickyHeader");
+			var stickyHeaderPosition = header.offset();
+			var planTable = $(".plan-table");
+			var fromTop = $("html").scrollTop();
+			var flag = 1;
+			$(window).on("scroll", function(e) {
+				if (flag) {
+					stickyHeaderPosition = header.offset();
+					flag -= 1;
+				}
+				fromTop = $("body").scrollTop();
+				if (fromTop > (stickyHeaderPosition.top)) {
+					header.addClass("fixed");
+					planTable.addClass("spacetop");
+				} else {
+					header.removeClass("fixed");
+					planTable.removeClass("spacetop");
+				}
+
+			});

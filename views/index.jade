@@ -16,7 +16,7 @@ block body
 			img.desk(src="./images/bg01.jpg", alt="")
 			img.mobile(src="./images/bgxs01.jpg", alt="")
 		.row
-			.col-sm-10.col-md-8.-block_center
+			.col-sm-10.col-md-8.-block_center.main_block
 				.row
 					.col-sm-5.col-xs-8
 						p.pageHeader travel information
@@ -46,14 +46,14 @@ block body
 						.row
 							.tab-content.clearfix.col-md-10.col-sm-11.col-xs-12.-block_center
 								.tab-pane.active#sec_in
-									form(action="./step_2.html")
+									form(action="./step_2.html" data-toggle="validator")
 										.radioForm(role='form')
 											.radio.radio-inline
-												input#radioRound(type='radio', name='trip', value='round',checked='')
+												input#radioRound(type='radio', name='trip', value='round',checked='' required)
 												label(for='radioRound')
 													| รายเที่ยว
 											.radio.radio-inline
-												input#radioYear(type='radio', name='trip', value='year')
+												input#radioYear(type='radio', name='trip', value='year' required)
 												label(for='radioYear')
 													| รายปี
 										//- .form-group.inline_field
@@ -68,12 +68,12 @@ block body
 										.form-group.inline_field
 											label วันออกเดินทาง
 											.datepick
-												input.form-control.material(type='text', name='startdate')
+												input.form-control.material(type='text', name='startdate' required)
 												i.ico_datestart
 										.form-group.inline_field
 											label วันสิ้นสุดการเดินทาง
 											.datepick
-												input.form-control.material(type='text', name='enddate')
+												input.form-control.material(type='text', name='enddate' required)
 												i.ico_dateend
 										.form-group.inline_field.text-resultDate
 											label จำนวนวันเดินทาง
@@ -88,14 +88,14 @@ block body
 
 								.tab-pane#sec_out
 									.tab-pane.active#sec_in
-										form(action="./step_2_in.html")
+										form(action="./step_2_in.html" data-toggle="validator")
 											.radioForm(role='form')
 												.radio.radio-inline
-													input#radioRound_in(type='radio', name='trip', value='round',checked='')
+													input#radioRound_in(type='radio', name='trip', value='round',checked='' required)
 													label(for='radioRound_in')
 														| รายเที่ยว
 												.radio.radio-inline
-													input#radioYear_in(type='radio', name='trip', value='year')
+													input#radioYear_in(type='radio', name='trip', value='year' required)
 													label(for='radioYear_in')
 														| รายปี
 											//- .form-group.inline_field
@@ -116,12 +116,12 @@ block body
 											.form-group.inline_field
 												label วันออกเดินทาง
 												.datepick
-													input.form-control.material(type='text', name='startdate')
+													input.form-control.material(type='text', name='startdate' required)
 													i.ico_datestart
 											.form-group.inline_field
 												label วันสิ้นสุดการเดินทาง
 												.datepick
-													input.form-control.material(type='text', name='enddate')
+													input.form-control.material(type='text', name='enddate' required)
 													i.ico_dateend
 											.form-group.inline_field.text-resultDate
 												label จำนวนวันเดินทาง
