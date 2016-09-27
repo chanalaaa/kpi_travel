@@ -16,10 +16,10 @@
  .footer_block {
      padding-top: 5em;
      img {
-         width: 60%;
+         width: 50%;
          max-width: 400px;
          @media #{$md} {
-             width: 40%;
+             width: 30%;
          }
      }
      &.right {
