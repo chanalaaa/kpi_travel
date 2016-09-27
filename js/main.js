@@ -66,16 +66,20 @@ jQuery(document).ready(function($) {
             });
     }
 
-    /*sticy header table (md)*/
+    /*sticy header table (sm)*/
 
-
-    var stickyHeaderPosition = $('.stickyHeader').offset();
     var header = $(".stickyHeader");
+    var stickyHeaderPosition = header.offset();
     var planTable = $(".plan-table");
-    var fromTop = $("body").scrollTop();
+    var fromTop = $("html").scrollTop();
+    var flag = 1;
     $(window).on("scroll", function(e) {
+        if (flag) {
+            stickyHeaderPosition = header.offset();
+            flag -= 1;
+        }
         fromTop = $("body").scrollTop();
-        if (fromTop > stickyHeaderPosition.top) {
+        if (fromTop > (stickyHeaderPosition.top)) {
             header.addClass("fixed");
             planTable.addClass("spacetop");
         } else {

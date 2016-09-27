@@ -66,13 +66,31 @@
     }
     
     .animated {
-        visibility: hidden;
-        -webkit-animation-duration: 500 ms;
-        animation-duration: 500 ms;
+        -webkit-animation-duration: 1000 ms;
+        animation-duration: 1000 ms;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
     
     .owl-animated-out {
         z-index: 1
+    }
+    
+    .owl-item {
+        .plan-header_text {
+            opacity: 0;
+            transition: opacity .6s ease-in-out;
+        }
+        .plan-table {
+            opacity: 0;
+            transition: opacity .6s ease-in-out;
+        }
+        &.active {
+            .plan-header_text {
+                opacity: 1;
+            }
+            .plan-table {
+                opacity: 1;
+            }
+        }
     }
