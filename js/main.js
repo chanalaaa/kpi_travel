@@ -71,7 +71,11 @@ jQuery(document).ready(function($) {
 
     /* custom style td */
     var tableHeight = $(".tablelist").height();
+    $(".tablelist table td:nth-child(" + (3) + ")").addClass('hover');
+    $(".tablelist table td:nth-child(" + (3) + ")").addClass('blueHover');
     $('td').hover(function() {
+        $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
+        $(".tablelist table td:nth-child(" + (3) + ")").removeClass('blueHover');
         var col = $(this).parent().children().index($(this));
         //var row = $(this).parent().parent().children().index($(this).parent());
         $(".tablelist table td:nth-child(" + (col + 1) + ")").toggleClass('hover');

@@ -27,11 +27,14 @@ table {
     }
     tbody {
         font-family: 'kanda';
-        font-size: 1.4em;
+        font-size: 1.6em;
         color: $darkgray;
-        letter-spacing: 2px;
+        letter-spacing: 0px;
         padding: 15px;
         margin-top: 25px;
+         @media #{$lg}{
+            letter-spacing: 1px;
+        }
         &:before {
             content: '';
             display: block;
@@ -48,6 +51,7 @@ table {
                     text-align: left;
                     @media #{$md} {
                         width: 35%;
+                        min-width: 200px;
                     }
                 }
                 &:not(:first-child) {
@@ -158,6 +162,12 @@ a.read_more {
         margin-bottom: 0;
         white-space: nowrap;
         @media #{$md} {
+            font-size: 1.5em;
+            width: auto;
+            color: $darkgray;
+            white-space: normal;
+        }
+        @media #{$lg} {
             font-size: 1.35em;
             width: auto;
             color: $darkgray;
@@ -238,7 +248,11 @@ th {
     td:hover::after,
     thead th:not(:empty):hover::after,
     td:focus::after,
-    thead th:not(:empty):focus::after {
+    thead th:not(:empty):focus::after, 
+    td.blueHover::after,
+    thead th.blueHover:not(:empty)::after,
+    td.blueHover::after,
+    thead th.blueHover:not(:empty)::after  {
     content: '';
     height: 10000px;
     left: 0;
@@ -249,7 +263,8 @@ th {
    
 }
 
-td:hover::after{
+td:hover::after,
+td.blueHover::after{
     @include blue_gradient('v');
 }
 
