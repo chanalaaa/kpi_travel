@@ -330,3 +330,32 @@ p.text-resultDate {
         }
     }
 }
+
+i.tip {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: $lightgray20;
+    @media #{$md} {
+            right: -15px;
+    }
+    @media #{$lg} {
+        right: -10px;
+    }
+}
+.tip + .tooltip > .tooltip-arrow{
+     border-bottom-color: $lightgray;
+}
+.tip + .tooltip > .tooltip-inner {
+    text-align: left;
+    font-family: kanda_b;
+    font-size: 22px;
+    color: #fff;
+    background: $lightgray;
+    margin-left: -150px;
+    width: 200px;
+    line-height: 22px;
+}
+.tooltip.in{
+    opacity: 1;
+}

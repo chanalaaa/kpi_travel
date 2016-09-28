@@ -109,7 +109,7 @@ span {
     font-size: 22px;
     letter-spacing: 0px;
     line-height: 20px;
-    @media #{$md}{
+    @media #{$lg}{
         letter-spacing: 1px;
     }
 }

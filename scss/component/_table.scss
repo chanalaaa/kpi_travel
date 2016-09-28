@@ -7,6 +7,7 @@
 .tablelist,.swipe{
 
 table {
+
     td {
         border-style: dotted;
         border-width: 1px;
@@ -17,6 +18,7 @@ table {
     thead {
         tr {
             td {
+                   font-family: 'kanda_b';
                 border: none;
                 border-bottom: 1px solid $lightgray20;
                 padding: 20px 8px 15px !important;
@@ -37,6 +39,7 @@ table {
         }
         tr {
             td {
+                font-family: 'kanda_b';
                 border-top: 1px dotted #ddd !important;
                 line-height: 20px !important;
                 &:first-child {
@@ -146,6 +149,7 @@ a.read_more {
 
 .plan-header_text {
     p {
+        font-family: kanda_b;
         vertical-align: middle;
         color: #fff;
         font-size: 2.2em;
