@@ -296,7 +296,9 @@ p.text-resultDate {
         margin: 3em 0 !important;
     }
 }
-
+.form-control[disabled]{
+    //color: $lightgray;
+}
 // validation style
 .form-group {
     &.has-error {

@@ -26,6 +26,15 @@
  
  .step-tab {
      padding: 2em 0 2.5em;
+     .inline_field label {
+        font-family: kanda;
+        font-weight: normal;
+         width: 60%;
+         font-size: 1.5em;
+         @media #{$md} {
+             width: 32.666667%
+         }
+     }
  }
  
  .nav-tabs {

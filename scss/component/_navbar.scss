@@ -26,10 +26,10 @@
 //     float: none;
 // }
 .navbar-brand {
-    width: 240px;
+    width: 250px;
     float: left;
     height: auto;
-    padding: 6px 0px 0 25px;
+    padding: 7px 0px 0 25px;
     font-size: 18px;
     line-height: 20px;
     @media #{$md} {
@@ -67,7 +67,7 @@
     }
 }
 
-/* Bootstrap navbar collapse media-query on custom width */
+/* Bootstrap navbar collapse media-query */
 
 @media (max-width: 890px) {
     .navbar-header {

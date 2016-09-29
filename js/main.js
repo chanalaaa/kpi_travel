@@ -73,6 +73,9 @@ jQuery(document).ready(function($) {
     var tableHeight = $(".tablelist").height();
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('hover');
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('blueHover');
+    $('table').hover(function() {
+         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
+    });
     $('td').hover(function() {
         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('blueHover');

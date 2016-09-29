@@ -79,5 +79,11 @@
                 }
             }
         }
+        &.highlight {
+            p {
+                font-size: 1.3em;
+                color: $mainblue;
+            }
+        }
     }
 }

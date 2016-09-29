@@ -20,11 +20,16 @@
         font-size: 1.8em;
         line-height: 28px;
         margin: 0 auto;
+        text-align: center;
         &.title {
             font-family: kanda_b;
             font-size: 3em;
             color: $mainblue;
-            margin-bottom: .5em;
+            margin: .2em 0 .5em;
+            text-align: center;
+            span{
+                font-size: .6em;
+            }
         }
     }
     a {

@@ -332,3 +332,18 @@ tbody th:focus::before {
         width: 55%;
     }
 }
+.daterangepicker .calendar th{
+         color: $mainblue;
+}
+.daterangepicker .calendar tr:first-child{
+    th{
+         color: #28598F;
+    } 
+}
+.daterangepicker td.active{
+     background-color:  #28598F;
+}
+
+.daterangepicker td.start-date.end-date{
+    border-radius: 0;
+}

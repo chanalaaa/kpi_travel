@@ -65,7 +65,7 @@ block body
 										a(href="#").history-action
 											i.fa.fa-chevron-circle-left
 											| แก้ไข
-									.history_detail
+									.history_detail.highlight
 										.col-sm-6
 											p วีซ่าพลัส 641 บาท
 
@@ -140,35 +140,40 @@ block body
 																	label ที่อยู่
 										.form-group.inline_field.form-space2
 											.row
-												.col-sm-4.-no-padding
+												.col-sm-3.-no-paddingRight 
 														label.top จังหวัด
 														.row
-															.col-xs-12
+															.col-xs-12.-no-paddingRight 
 																select.selectpicker
 																	option Bangkok
 																	option Lopburi
-												.col-sm-4.-no-padding
+												.col-sm-3.-no-padding
 														label.top อำเภอ / เขต
 														.row
-															.col-xs-12
+															.col-xs-12.-no-paddingRight 
 																select.selectpicker
 																	option Phayathai
 																	option Phrakanong
-												.col-sm-4.-no-padding
-														label.top ตำบล / แขวง
+												.col-sm-3.-no-paddingRight
+														.row
+															.form-group.inline_field.materialLabel
+																	.group
+																		input(type="number" required )
+																		label ตำบล / แขวง
+												.col-sm-3.-no-padding
 														.row
 															.col-xs-12
-																select.selectpicker
-																	option Bangkapi
-																	option Phachautid
+																.form-group.inline_field.materialLabel
+																	.group
+																		input(type="number" required )
+																		label รหัสไปรษณีย์
 										.form-group.inline_field
 											.row
 												.col-sm-6.-no-padding
-													label.top รหัสไปรษณีย์
 													.row
-														.col-xs-4.text-resultDate
-															p 10250
-														.col-xs-8
+														//- .col-xs-4.text-resultDate
+														//- 	p 10250
+														.col-xs-12
 															.form-group.inline_field.materialLabel
 																.group
 																	input(type="number" required )
