@@ -7,9 +7,12 @@
  }
  
  .forlgfooter footer {
-     @media screen and (min-width: 1800px) {
+     @media screen and (min-width: 1950px) {
          position: absolute;
          bottom: 0;
+     }
+     @media screen and (width: 1920) , screen and (height: 1080) {
+         position: relative;
      }
  }
  
