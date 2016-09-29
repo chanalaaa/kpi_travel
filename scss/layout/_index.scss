@@ -27,8 +27,8 @@
  .step-tab {
      padding: 2em 0 2.5em;
      .inline_field label {
-        font-family: kanda;
-        font-weight: normal;
+         font-family: kanda;
+         font-weight: normal;
          width: 60%;
          font-size: 1.5em;
          @media #{$md} {
@@ -82,8 +82,27 @@
      }
  }
  
+ .forYearShow {
+     display: none;
+ }
+ 
+ .forYearHide {
+     display: block;
+ }
+ 
  .tab-content {
      padding: 2em 15px 0;
+ }
+ 
+ .tab-pane {
+     &.year {
+         .forYearShow {
+             display: block;
+         }
+         .forYearHide {
+             display: none;
+         }
+     }
  }
  
  // End Content //////////////////////////////////

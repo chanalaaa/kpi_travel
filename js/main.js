@@ -30,15 +30,16 @@ jQuery(document).ready(function($) {
     });
 
     /* datepicker */
-    $('input[name="startdate"],input[name="enddate"]').daterangepicker({
-        locale: {
-            format: 'DD/MM/YYYY'
-        },
-        singleDatePicker: true,
-        showDropdowns: false,
-        opens: 'left',
+    $('input[name="startdate"],input[name="enddate"],input[name="startdate_in"]').daterangepicker({
+            locale: {
+                format: 'DD/MM/YYYY'
+            },
+            singleDatePicker: true,
+            showDropdowns: false,
+            opens: 'left',
 
-    });
+        });
+
     $(".ico_datestart").on("click", function() {
         $(this).parent().find('input').trigger("click");
     })
@@ -47,13 +48,19 @@ jQuery(document).ready(function($) {
     })
 
 
-    $('input[name="startdate"]').on('apply.daterangepicker', function(ev, picker) {
+    $('input[name="startdate"],input[name="startdate_in"]').on('apply.daterangepicker', function(ev, picker) {
         console.log("startdate: " + picker.startDate.format('YYYY-MM-DD'));
+        var y = parseInt(picker.startDate.format('YYYY'));
+        var m = parseInt(picker.startDate.format('MM'));
+        var d = parseInt(picker.startDate.format('DD'));
+        $(this).parents(".tab-pane").find("#resultYear").text((d-1)+"/"+m+"/"+(y+1));
     });
 
-    $('input[name="enddate"]').on('apply.daterangepicker', function(ev, picker) {
-        console.log("enddate: " + picker.startDate.format('YYYY-MM-DD'));
-
+    $("input#radioYear,input#radioYear_in").click(function(){
+       $(this).parents(".tab-pane").addClass('year');   
+    });
+      $("input#radioRound,input#radioRound_in").click(function(){
+       $(this).parents(".tab-pane").removeClass('year');   
     });
 
     /* table hover */
@@ -67,14 +74,12 @@ jQuery(document).ready(function($) {
     }
 
 
-
-
     /* custom style td */
     var tableHeight = $(".tablelist").height();
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('hover');
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('blueHover');
     $('table').hover(function() {
-         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
+        $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
     });
     $('td').hover(function() {
         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');

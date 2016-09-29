@@ -71,14 +71,17 @@ block body
 											.datepick
 												input.form-control.material(type='text', name='startdate' required)
 												i.ico_datestart
-										.form-group.inline_field
+										.form-group.inline_field.forYearHide
 											label วันสิ้นสุดการเดินทาง
 											.datepick
 												input.form-control.material(type='text', name='enddate' required)
 												i.ico_dateend
-										.form-group.inline_field.text-resultDate
+										.form-group.inline_field.text-resultDate.forYearHide
 											label จำนวนวันเดินทาง
 											p 10
+										.form-group.inline_field.text-resultDate.forYearShow
+												label วันสิ้นสุดการเดินทาง
+												p#resultYear 29/09/2016
 										//- .form-group.inline_field.materialLabel
 										//- 	.group
 										//- 		input(type='text' required)
@@ -118,13 +121,19 @@ block body
 											.form-group.inline_field
 												label วันออกเดินทาง
 												.datepick
-													input.form-control.material(type='text', name='startdate' required)
+													input.form-control.material(type='text', name='startdate_in' required )
 													i.ico_datestart
-											.form-group.inline_field.text-resultDate
+											.form-group.inline_field.forYearHide
 												label วันสิ้นสุดการเดินทาง
-												p 29/09/2016
-												//- .datepick
-												//- 	input.form-control.material(type='text', name='enddate' disabled)
+												.datepick
+													input.form-control.material(type='text', name='enddate' required)
+													i.ico_dateend
+											.form-group.inline_field.text-resultDate.forYearHide
+													label จำนวนวันเดินทาง
+													p 10
+											.form-group.inline_field.text-resultDate.forYearShow
+													label วันสิ้นสุดการเดินทาง
+													p#resultYear 29/09/2016
 											//- .form-group.inline_field.text-resultDate
 											//- 	label จำนวนวันเดินทาง
 											//- 	p 10
