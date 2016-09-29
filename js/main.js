@@ -47,13 +47,19 @@ jQuery(document).ready(function($) {
         $(this).parent().find('input').trigger("click");
     })
 
-
+      /* calculate datepicker (Year trip) */
     $('input[name="startdate"],input[name="startdate_in"]').on('apply.daterangepicker', function(ev, picker) {
-        console.log("startdate: " + picker.startDate.format('YYYY-MM-DD'));
+        //console.log("startdate: " + picker.startDate.format('YYYY-MM-DD'));
         var y = parseInt(picker.startDate.format('YYYY'));
         var m = parseInt(picker.startDate.format('MM'));
         var d = parseInt(picker.startDate.format('DD'));
-        $(this).parents(".tab-pane").find("#resultYear").text((d-1)+"/"+m+"/"+(y+1));
+        var dayOflastMonth = (picker.startDate.subtract(1, 'month').endOf('month')).format('DD');
+        if((d-1) >= 1){
+             $(this).parents(".tab-pane").find("#resultYear").text((d-1)+"/"+m+"/"+(y+1));
+        }else{
+             $(this).parents(".tab-pane").find("#resultYear").text((dayOflastMonth)+"/"+(m-1)+"/"+(y+1));
+        }
+       
     });
 
     $("input#radioYear,input#radioYear_in").click(function(){
