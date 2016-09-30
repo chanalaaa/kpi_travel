@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
     /* datepicker *******************************************************/
     /* and calculate datepicker (Year trip) */
     var start = moment();
+
     function setDefaultYearTrip(start) {
         var y = parseInt(start.format('YYYY'));
         var m = parseInt(start.format('MM'));
@@ -111,5 +112,15 @@ jQuery(document).ready(function($) {
         $(".tablelist table td:nth-child(" + (col + 1) + ")").toggleClass('hover');
     });
 
+    if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
+        $('body').on("mousewheel", function() {
+            // remove default behavior
+            event.preventDefault();
 
+            //scroll without smoothing
+            var wheelDelta = event.wheelDelta;
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+    }
 });
