@@ -4,7 +4,7 @@ block var
 	-var currentPage = "home"
 
 block title
-	title ชำระเงิน
+	title ชำระเงิน | INSURED
 	
 block jsFirst
 
@@ -61,7 +61,7 @@ block body
 												p แบ่งชำระ
 													.radioForm(role='form')
 														.radio
-															input#radioPay1(type='radio', name='trip', value='round',checked='')
+															input#radioPay1(type='radio', name='trip', value='round')
 															label(for='radioPay1')
 																| 325.68 บาท x 3 เดือน
 														.radio
@@ -74,7 +74,7 @@ block body
 												p ใช้คะแนนสะสม
 													.radioForm(role='form')
 														.radio
-															input#radioPoint(type='radio', name='trip', value='round',checked='')
+															input#radioPoint(type='radio', name='trip', value='round')
 															label(for='radioPoint')
 																| ใช้คะแนนสะสมแทนเงินสด 50,000 คะแนน
 
