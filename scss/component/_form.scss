@@ -298,6 +298,12 @@ p.text-resultDate {
         margin: 3em 0 !important;
     }
 }
+.form-spaceTop {
+    margin: 1.2em 0 0em!important;
+    @media #{$md} {
+        margin: 3em 0 0!important;
+    }
+}
 .form-control[disabled]{
     //color: $lightgray;
 }
