@@ -46,9 +46,9 @@ jQuery(document).ready(function($) {
         var d = parseInt(start.format('DD'));
         var dayOflastMonth = (start.subtract(1, 'month').endOf('month')).format('DD');
         if ((d - 1) >= 1) {
-            $(".tab-pane").find("#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
+            $(".tab-pane").find("p#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
         } else {
-            $(".tab-pane").find("#resultYear").text((dayOflastMonth) + "/" + (m - 1) + "/" + (y + 1));
+            $(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" +(m < 10 ? 0 : '')+(m - 1) + "/" + (y + 1));
         }
     }
 
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
         showDropdowns: false,
         opens: 'left'
 
-    }, setDefaultYearTrip);
+    });
     setDefaultYearTrip(start);
     $(".ico_datestart").on("click", function() {
         $(this).parent().find('input').trigger("click");
@@ -78,9 +78,9 @@ jQuery(document).ready(function($) {
         var d = parseInt(picker.startDate.format('DD'));
         var dayOflastMonth = (picker.startDate.subtract(1, 'month').endOf('month')).format('DD');
         if ((d - 1) >= 1) {
-            $(this).parents(".tab-pane").find("#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
+            $(this).parents(".tab-pane").find("p#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
         } else {
-            $(this).parents(".tab-pane").find("#resultYear").text((dayOflastMonth) + "/" + (m - 1) + "/" + (y + 1));
+            $(this).parents(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" +(m < 10 ? 0 : '')+(m - 1) + "/" + (y + 1));
         }
 
     });
