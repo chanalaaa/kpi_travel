@@ -1,4 +1,18 @@
 jQuery(document).ready(function($) {
+
+    /* random bg *******************************************************/
+    var url = window.location.pathname;
+    var urlsplit = url.split("/").slice(-1)[0];
+    var num;
+    //if (urlsplit == "" || urlsplit == "index.html") {
+        var min = 1;
+        var max = 4;
+        num = Math.floor(Math.random() * (max - min + 1)) + min;
+        var src_desk = ("./images/bg0"+num+".jpg");
+        var src_res = ("./images/bgxs0"+num+".jpg");
+        $(".bgPage").children('img.desk').attr("src", src_desk);
+        $(".bgPage").children('img.mobile').attr("src", src_res);
+     //}   
     /* table carousel *******************************************************/
     $('.owl-carousel').owlCarousel({
         navContainer: '#customNav',
@@ -48,7 +62,7 @@ jQuery(document).ready(function($) {
         if ((d - 1) >= 1) {
             $(".tab-pane").find("p#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
         } else {
-            $(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" +(m < 10 ? 0 : '')+(m - 1) + "/" + (y + 1));
+            $(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" + (m < 10 ? 0 : '') + (m - 1) + "/" + (y + 1));
         }
     }
 
@@ -80,7 +94,7 @@ jQuery(document).ready(function($) {
         if ((d - 1) >= 1) {
             $(this).parents(".tab-pane").find("p#resultYear").text((d - 1) + "/" + m + "/" + (y + 1));
         } else {
-            $(this).parents(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" +(m < 10 ? 0 : '')+(m - 1) + "/" + (y + 1));
+            $(this).parents(".tab-pane").find("p#resultYear").text((dayOflastMonth) + "/" + (m < 10 ? 0 : '') + (m - 1) + "/" + (y + 1));
         }
 
     });

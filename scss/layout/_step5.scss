@@ -27,25 +27,52 @@
         @media #{$lg} {
             padding: 9em 0;
         }
-        &:first-child {
+        &:first-child,
+        &:last-child {
             padding: 5em 0;
             @media #{$lg} {
                 padding: 9em 0;
             }
             .option-inner {
                 @media #{$lg} {
-                    top: 59.5%;
+                    top: 60%;
                 }
             }
         }
-        &:not(:first-child) {
+        &:nth-child(1) {
+            @media #{$lg} {
+                border-top: none;
+                border-right: 1px dotted $lightgray20;
+            }
+        }
+        &:nth-child(2) {
             border-top: 1px dotted $lightgray20;
             @media #{$lg} {
                 border-top: none;
-                border-left: 1px dotted $lightgray20;
+            }
+            .option-inner {
+                 padding-top: 15%;
+                @media #{$lg} {
+                      padding-top: 0;
+                    padding-left: 8%;
+                }
+            }
+        }
+        &:last-child {
+            border-top: none;
+            @media #{$lg} {
+                border-left: none;
+            }
+            .option-inner {
+
+                @media #{$lg} {
+
+                    top: 67%;
+                }
             }
         }
         .option-inner {
+            width: 90%;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -54,11 +81,24 @@
             p {
                 margin: 0 0 .1em;
                 text-align: left;
+                &.title {
+                    font-size: 2em;
+                    font-family: kanda_b;
+                    color: #000;
+                    span {
+                        font-size: .7em;
+                        display: block;
+                        font-family: omnes;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
             }
             img {
-                width: 200px;
+                width: 110px;
                 text-align: center;
-                margin-bottom: 2em;
+                margin-bottom: 1em;
+                display: block;
             }
             .radioForm {
                 text-align: left;

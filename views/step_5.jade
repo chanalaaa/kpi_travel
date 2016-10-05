@@ -13,8 +13,8 @@ block body
 		include ./layout/_header   
 		//- content 
 		.bgPage
-			img.desk(src="./images/bg01.jpg", alt="")
-			img.mobile(src="./images/bgxs01.jpg", alt="")
+			img.desk(src="", alt="")
+			img.mobile(src="", alt="")
 		.row
 			.col-sm-10.col-md-8.-block_center.main_block
 				.row
@@ -49,7 +49,7 @@ block body
 									.row
 										.option_block.col-md-4.col-sm-12
 											.option-inner
-												p ชำระเงินเต็มจำนวน
+												p.title ชำระเงินเต็มจำนวน
 													.radioForm(role='form')
 														.radio
 															input#radioCash(type='radio', name='trip', value='round',checked='')
@@ -57,8 +57,9 @@ block body
 																| 1,154 บาท
 										.option_block.col-md-4.col-sm-12
 											.option-inner
-												img.logo(src="./images/ktc_logo.jpg")
-												p แบ่งชำระ
+												img.logo(src="./images/ktc_logo.png")
+												p.title แบ่งชำระ 
+													span ktc flexi
 													.radioForm(role='form')
 														.radio
 															input#radioPay1(type='radio', name='trip', value='round')
@@ -70,8 +71,8 @@ block body
 																| 155.22 บาท x 6 เดือน
 										.option_block.col-md-4.col-sm-12
 											.option-inner
-												img.logo(src="./images/ktc_logo.jpg")
-												p ใช้คะแนนสะสม
+												p.title ใช้คะแนนสะสม
+													span ktc forever rewards
 													.radioForm(role='form')
 														.radio
 															input#radioPoint(type='radio', name='trip', value='round')
