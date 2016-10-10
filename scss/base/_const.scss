@@ -62,6 +62,9 @@ body {
 
 .main_block {
     max-width: 900px;
+    @media #{$md} {
+        padding-top: 6%;
+    }
 }
 
 .bgPage {
@@ -80,10 +83,6 @@ body {
         margin: auto;
         min-width: 50%;
         min-height: 50%;
-        @media #{$md} {
-            top: 19%;
-            min-width: 52%;
-        }
     }
 }
 
