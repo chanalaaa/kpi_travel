@@ -17,6 +17,15 @@ block body
 			img.mobile(src="", alt="")
 		.row
 			.col-sm-10.col-md-8.-block_center.main_block
+				#signupModal.modal.fade(role='dialog')
+					.modal-dialog
+						.modal-content
+							.modal-header
+								h4.modal-title คำเตือน
+							.modal-body
+								p ท่านไม่สามารถทำรายการนี้ได้ กรุณาติดต่อผู้ดูแลระบบ
+							.modal-footer
+								button.btn.btn-default(type='button', data-dismiss='modal') ปิด
 				.row
 					.col-sm-5.col-xs-12
 						p.pageHeader INSURED<br>INFORMATION
@@ -250,7 +259,7 @@ block body
 														a(href="#").line_add
 															i.fa.fa-plus-circle
 															| เพิ่มผู้เอาประกัน
-												button.btn.btn-primary.-center(type='submit' ) ถัดไป
+												button.btn.btn-primary.-center(type='submit' data-toggle="modal" data-target="#signupModal") ถัดไป
 														
 
 
@@ -265,4 +274,8 @@ block body
 
 
 block js
-	//-script here
+	script.
+		var $signup = k$.modal(".signup");
+		$('#submitStep').addEventListener('click', function(e) {
+			$signup.style.display = 'block';
+		});

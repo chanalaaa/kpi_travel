@@ -40,6 +40,19 @@
       <div class="bgPage"><img src="" alt="" class="desk"><img src="" alt="" class="mobile"></div>
       <div class="row">
         <div class="col-sm-10 col-md-8 -block_center main_block">
+          <div id="signupModal" role="dialog" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">คำเตือน</h4>
+                </div>
+                <div class="modal-body">
+                  <p>ท่านไม่สามารถทำรายการนี้ได้ กรุณาติดต่อผู้ดูแลระบบ</p>
+                </div>
+                <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">ปิด</button></div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-sm-5 col-xs-12">
               <p class="pageHeader">INSURED<br>INFORMATION</p>
@@ -277,7 +290,7 @@
                           </div>
                           <div class="row">
                             <div class="col-sm-12"><a href="#" class="line_add"><i class="fa fa-plus-circle"></i>เพิ่มผู้เอาประกัน</a></div>
-                          </div><button type="submit" class="btn btn-primary -center">ถัดไป</button></p>
+                          </div><button type="submit" data-toggle="modal" data-target="#signupModal" class="btn btn-primary -center">ถัดไป</button></p>
                       </div>
                     </form>
                   </div>
@@ -296,6 +309,13 @@
         </div>
       </footer>
     </div>
+    <script>
+      var $signup = k$.modal(".signup");
+      $('#submitStep').addEventListener('click', function(e)
+      {
+        $signup.style.display = 'block';
+      });
+    </script>
     <script type="text/javascript" src="./js/vendors/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="./js/vendors/validator.min.js"></script>
     <script type="text/javascript" src="./js/vendors/moment.min.js"></script>
