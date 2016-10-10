@@ -1,5 +1,5 @@
 .navbar {
-    padding: 10px 0;
+    padding: 5px 0;
     border-radius: 0 !important;
     a {
         font-family: 'kanda_b';
@@ -18,6 +18,9 @@
     }
     li:last-child {
         padding: 0 15px;
+    }
+    @media #{$md} {
+        padding: 10px 0;
     }
 }
 
@@ -67,13 +70,15 @@
     }
 }
 
+
 /* Bootstrap navbar collapse media-query */
 
 @media (max-width: 890px) {
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+    .navbar-left,
+    .navbar-right {
         float: none !important;
     }
     .navbar-toggle {
@@ -81,7 +86,7 @@
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
     .navbar-fixed-top {
         top: 0;
@@ -101,7 +106,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .collapse.in{
-        display:block !important;
+    .collapse.in {
+        display: block !important;
     }
 }

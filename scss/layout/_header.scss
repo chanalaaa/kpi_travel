@@ -1,15 +1,17 @@
  // Header //////////////////////////////////
  .pageHeader {
-     padding-top: 1em;
-     font-family: 'omnes';
-     text-transform: uppercase;
-     font-size: 2.8em;
-     line-height: 45px;
-     color: #fff;
-     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-     @media #{$md}{
-     	font-size: 3.7em;
-     }
+	//padding-top: 1em;
+	padding-top: 30px;
+	font-family: 'omnes';
+	text-transform: uppercase;
+	font-size: 2.8em;
+	line-height: 45px;
+	color: #fff;
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	@media #{$md}{
+		padding-top: 20px;
+		font-size: 3.7em;
+	}
  }
  
  // End Header //////////////////////////////////

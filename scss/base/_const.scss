@@ -59,9 +59,11 @@ body {
 #wrapper {
     //position: relative;
 }
-.main_block{
+
+.main_block {
     max-width: 900px;
 }
+
 .bgPage {
     position: fixed;
     top: -50%;
@@ -78,6 +80,10 @@ body {
         margin: auto;
         min-width: 50%;
         min-height: 50%;
+        @media #{$md} {
+            top: 19%;
+            min-width: 52%;
+        }
     }
 }
 
@@ -109,7 +115,7 @@ span {
     font-size: 24px;
     letter-spacing: 0px;
     line-height: 20px;
-    @media #{$lg}{
+    @media #{$lg} {
         letter-spacing: 1px;
     }
 }
@@ -143,4 +149,8 @@ span {
     display: block;
     height: 2px;
     margin: 0 auto;
+}
+
+.-text-big {
+    font-size: 25px;
 }

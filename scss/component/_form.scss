@@ -45,7 +45,8 @@ button.dropdown-toggle {
 
 // input
 input {
-    font-size: 15px;
+    font-size: 23px;
+    font-family: 'kanda_b';
     margin: 0;
     &.material {
         padding: 10px 10px 10px 5px;
@@ -111,7 +112,7 @@ label {
             }
         }
         input {
-            padding: 8px 10px 8px 5px;
+            padding: 5px 10px 2px 5px;
             display: block;
             width: 100%;
             border: none;
@@ -298,24 +299,32 @@ p.text-resultDate {
         margin: 3em 0 !important;
     }
 }
+
 .form-spaceTop {
     margin: 1.2em 0 0em!important;
     @media #{$md} {
         margin: 3em 0 0!important;
     }
 }
-.form-control[disabled]{
+
+.form-control[disabled] {
     //color: $lightgray;
 }
+
 // validation style
 .form-group {
     &.has-error {
         input {
             border-bottom: 1px solid $notired;
             &:focus {
-                border-bottom: 1px solid $lightgray;
+                //border-bottom: 1px solid $lightgray;
+                border-bottom: 1px solid $notired;
+                &~label {
+                    color: $notired;
+                }
                 label {
-                    color: $lightgray20;
+                    //color: $lightgray20;
+                    color: $notired;
                 }
             }
             &:valid {
@@ -347,15 +356,17 @@ i.tip {
     top: 10px;
     color: $lightgray20;
     @media #{$md} {
-            right: -15px;
+        right: -15px;
     }
     @media #{$lg} {
         right: -10px;
     }
 }
-.tip + .tooltip > .tooltip-arrow{
-     border-bottom-color: $lightgray;
+
+.tip + .tooltip > .tooltip-arrow {
+    border-bottom-color: $lightgray;
 }
+
 .tip + .tooltip > .tooltip-inner {
     text-align: left;
     font-family: kanda_b;
@@ -366,36 +377,34 @@ i.tip {
     width: 200px;
     line-height: 22px;
 }
-.tooltip.in{
+
+.tooltip.in {
     opacity: 1;
 }
 
-
-
-input[type=number]::-webkit-inner-spin-button { 
+input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    cursor:pointer;
-    display:block;
-    width:8px;
+    cursor: pointer;
+    display: block;
+    width: 8px;
     color: #333;
-    text-align:center;
-    position:relative;
+    text-align: center;
+    position: relative;
 }
-
 
 input[type=number]::-webkit-inner-spin-button:before,
 input[type=number]::-webkit-inner-spin-button:after {
     content: "^";
-    position:absolute;
+    position: absolute;
     right: 0;
-    font-family:monospace;
+    font-family: monospace;
 }
 
 input[type=number]::-webkit-inner-spin-button:before {
-    top:0px;
+    top: 0px;
 }
 
 input[type=number]::-webkit-inner-spin-button:after {
-    bottom:0px;
+    bottom: 0px;
     -webkit-transform: rotate(180deg);
 }
