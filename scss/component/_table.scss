@@ -195,6 +195,7 @@ a.read_more {
         display: block;
     }
     .btn-primary {
+        margin-top: 1.5em;
         @media #{$md} {
             color: $lightgray30;
             background: #fff;

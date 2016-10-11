@@ -1,5 +1,5 @@
 .payment_block {
-    margin: 4em 0 2em;
+    margin: 1em 0 2em;
 }
 
 .title_bar {
@@ -9,7 +9,7 @@
     background-color: $mainblue;
     margin-bottom: 0em;
     @media #{$md} {
-        margin-bottom: 3em;
+        margin-bottom: 1em;
     }
     p {
         color: #fff;
@@ -105,5 +105,8 @@
                 padding: 0;
             }
         }
+    }
+    .btn-primary{
+        margin-top: 1em;
     }
 }
