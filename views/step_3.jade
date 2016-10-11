@@ -23,7 +23,7 @@ block body
 							.modal-header
 								h4.modal-title คำเตือน
 							.modal-body
-								p ท่านไม่สามารถทำรายการนี้ได้ กรุณาติดต่อผู้ดูแลระบบ
+								p กรุณากรอกข้อมูลให้ครบถ้วน
 							.modal-footer
 								button.btn.btn-default(type='button', data-dismiss='modal') ปิด
 				.row
@@ -88,7 +88,7 @@ block body
 											i.fa.fa-times-circle
 											| ลบ
 									p.ps *กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง
-									form(action="./step_4.html" data-toggle="validator")
+									form#form_step3(action="./step_4.html" data-toggle="validator")
 										.form-group.inline_field
 											.row
 												.col-sm-6.-no-padding
@@ -259,9 +259,7 @@ block body
 														a(href="#").line_add
 															i.fa.fa-plus-circle
 															| เพิ่มผู้เอาประกัน
-												button.btn.btn-primary.-center(type='submit') ถัดไป
-												a(href="javescript:;" data-toggle="modal" data-target="#signupModal") 
-													| (คลิกเพื่อทดสอบ Popup)
+												button.btn.btn-primary.-center(type='submit' data-toggle="modal") ถัดไป
 														
 
 
@@ -277,7 +275,7 @@ block body
 
 block js
 	script.
-		var $signup = k$.modal(".signup");
-		$('#submitStep').addEventListener('click', function(e) {
-			$signup.style.display = 'block';
+		$('#form_step3').on('submit', function(e) {
+			e.preventDefault();
+			$('#signupModal').modal('show');
 		});

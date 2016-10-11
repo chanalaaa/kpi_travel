@@ -349,7 +349,10 @@ p.text-resultDate {
         }
     }
 }
-
+.btn.disabled, 
+.btn[disabled]{
+    cursor: pointer;
+}
 i.tip {
     position: absolute;
     right: 10px;

@@ -47,7 +47,7 @@
                   <h4 class="modal-title">คำเตือน</h4>
                 </div>
                 <div class="modal-body">
-                  <p>ท่านไม่สามารถทำรายการนี้ได้ กรุณาติดต่อผู้ดูแลระบบ</p>
+                  <p>กรุณากรอกข้อมูลให้ครบถ้วน</p>
                 </div>
                 <div class="modal-footer"><button type="button" data-dismiss="modal" class="btn btn-default">ปิด</button></div>
               </div>
@@ -124,7 +124,7 @@
                       <a href="#" class="header-action"> <i class="fa fa-times-circle"></i>ลบ</a>
                     </div>
                     <p class="ps">*กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง</p>
-                    <form action="./step_4.html" data-toggle="validator">
+                    <form id="form_step3" action="./step_4.html" data-toggle="validator">
                       <div class="form-group inline_field">
                         <div class="row">
                           <div class="col-sm-6 -no-padding">
@@ -290,8 +290,7 @@
                           </div>
                           <div class="row">
                             <div class="col-sm-12"><a href="#" class="line_add"><i class="fa fa-plus-circle"></i>เพิ่มผู้เอาประกัน</a></div>
-                          </div><button type="submit" class="btn btn-primary -center">ถัดไป</button><a href="javescript:;" data-toggle="modal" data-target="#signupModal"> 
-(คลิกเพื่อทดสอบ Popup)</a></p>
+                          </div><button type="submit" data-toggle="modal" class="btn btn-primary -center">ถัดไป</button></p>
                       </div>
                     </form>
                   </div>
@@ -311,10 +310,10 @@
       </footer>
     </div>
     <script>
-      var $signup = k$.modal(".signup");
-      $('#submitStep').addEventListener('click', function(e)
+      $('#form_step3').on('submit', function(e)
       {
-        $signup.style.display = 'block';
+        e.preventDefault();
+        $('#signupModal').modal('show');
       });
     </script>
     <script type="text/javascript" src="./js/vendors/bootstrap-select.min.js"></script>
