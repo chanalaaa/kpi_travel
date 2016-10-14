@@ -4,7 +4,7 @@ block var
 	-var currentPage = "home"
 
 block title
-	title ขั้นตอนที่ 3 (เลือกผู้เอาประกัน) | INSURED
+	title ประกันภัยการเดินทาง | i-Insure
 	
 block jsFirst
 
@@ -48,11 +48,11 @@ block body
 											| แก้ไข
 									.history_detail
 										.col-sm-6
-											p เดินทางต่างประเทศ รายเที่ยว
+											p เดินทางในประเทศ รายเที่ยว
 										.col-sm-6
 											ul.place-go
-												li ประเทศไทย
-												li สวิตเซอร์แลนด์
+												li กรุงเทพฯ
+												li ภูเก็ต
 										.col-sm-6
 											ul.duration-go
 												li 11/08/2016
@@ -78,7 +78,7 @@ block body
 										a(href="#").header-action 
 											i.fa.fa-times-circle
 											| ลบ
-									p.ps *กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง
+									p.ps
 									form(action="./step_4.html" data-toggle="validator")
 										.form-group.inline_field
 											.row
@@ -192,65 +192,65 @@ block body
 												a(href="#").header-action 
 													i.fa.fa-times-circle
 													| ลบ
-											p.ps *กรุณากรอกข้อความเป็นภาษาอังกฤษให้ตรงตามหนังสือเดินทาง
-												.form-group.inline_field
-													.row
-														.col-sm-6.-no-padding
+											p.ps
+											.form-group.inline_field
+												.row
+													.col-sm-6.-no-padding
+														.row
+															.col-xs-4
+																select.selectpicker
+																	option Mr.
+																	option Mrs.
+															.col-xs-8
+																.form-group.inline_field.materialLabel
+																	.group
+																		input(type='text' required)
+																		label ชื่อ
+													.col-sm-6.-no-padding
+														.row
+															.col-sm-12
+																.form-group.inline_field.materialLabel
+																	.group
+																		input(type='text' required)
+																		label นามสกุล
+											.form-group.inline_field.form-space
+												.row
+													.col-sm-6.-no-padding
+															label.top วันเดือนปีเกิด
 															.row
+																.col-xs-3
+																	select.selectpicker
+																		option 1
+																		option 2
+																.col-xs-5.-no-padding
+																	select.selectpicker
+																		option January
+																		option February
 																.col-xs-4
 																	select.selectpicker
-																		option Mr.
-																		option Mrs.
-																.col-xs-8
-																	.form-group.inline_field.materialLabel
-																		.group
-																			input(type='text' required)
-																			label ชื่อ
-														.col-sm-6.-no-padding
+																		option 2000
+																		option 2001
+													.col-sm-6.-no-padding
+															label.top สัญชาติ
 															.row
-																.col-sm-12
-																	.form-group.inline_field.materialLabel
-																		.group
-																			input(type='text' required)
-																			label นามสกุล
-												.form-group.inline_field.form-space
-													.row
-														.col-sm-6.-no-padding
-																label.top วันเดือนปีเกิด
-																.row
-																	.col-xs-3
-																		select.selectpicker
-																			option 1
-																			option 2
-																	.col-xs-5.-no-padding
-																		select.selectpicker
-																			option January
-																			option February
-																	.col-xs-4
-																		select.selectpicker
-																			option 2000
-																			option 2001
-														.col-sm-6.-no-padding
-																label.top สัญชาติ
-																.row
-																	.col-sm-9
-																		select.selectpicker
-																			option Thai
-																			option Dutch
-												.form-group.inline_field
-													.row
-														.col-sm-6
-															.form-group.inline_field.materialLabel
-																		.group
-																			input(type='text' required)
-																			label เลขหนังสือเดินทาง
-
+																.col-sm-9
+																	select.selectpicker
+																		option Thai
+																		option Dutch
+											.form-group.inline_field
 												.row
-													.col-sm-12
-														a(href="#").line_add
-															i.fa.fa-plus-circle
-															| เพิ่มผู้เอาประกัน
-												button.btn.btn-primary.-center(type='submit') ถัดไป
+													.col-sm-6
+														.form-group.inline_field.materialLabel
+																	.group
+																		input(type='text' required)
+																		label เลขหนังสือเดินทาง
+
+											.row
+												.col-sm-12
+													a(href="#").line_add
+														i.fa.fa-plus-circle
+														| เพิ่มผู้เอาประกัน
+											button.btn.btn-primary.-center(type='submit') ถัดไป
 												
 
 

@@ -115,17 +115,22 @@ jQuery(document).ready(function($) {
     var tableHeight = $(".tablelist").height();
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('hover');
     $(".tablelist table td:nth-child(" + (3) + ")").addClass('blueHover');
-    $('.forHighligthHide').hover(function() {
-        $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
-    });
+    // $('.forHighligthAction').hover(function() {
+    //     $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
+    // });
     $('td:not(:first-child)').hover(function() {
+         console.log("out");
         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('hover');
         $(".tablelist table td:nth-child(" + (3) + ")").removeClass('blueHover');
         var col = $(this).parent().children().index($(this));
         //var row = $(this).parent().parent().children().index($(this).parent());
         $(".tablelist table td:nth-child(" + (col + 1) + ")").toggleClass('hover');
     });
-
+    $('.forHighligthAction,td:first-child,#navbar,body').hover(function() {
+        $(".tablelist table td:nth-child(" + (3) + ")").addClass('hover');
+        $(".tablelist table td:nth-child(" + (3) + ")").addClass('blueHover');
+ });
+     /* fixed bg bug on ie *******************************************************/
     if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
         $('body').on("mousewheel", function() {
             // remove default behavior
