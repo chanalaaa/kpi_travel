@@ -348,6 +348,9 @@ p.text-resultDate {
         label {
             color: $notired;
         }
+        .form-control{
+            box-shadow: none;
+        }
     }
 }
 .btn.disabled, 

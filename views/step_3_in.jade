@@ -61,7 +61,7 @@ block body
 											p รวม 10 วัน
 								.item_history
 									.history_head
-										p.history-title แผนคุ้มครอง
+										p.history-title แผนประกันเดินทาง
 										a(href="#").history-action
 											i.fa.fa-chevron-circle-left
 											| แก้ไข
@@ -131,7 +131,7 @@ block body
 														option เลขบัตรประชาชน
 														option เลขหนังสือเดินทาง
 												.col-sm-6
-													input.form-control.material(type='text')
+													input.form-control.material(type='text' required)
 										.form-group.inline_field
 											.row
 												.col-sm-12
@@ -240,10 +240,11 @@ block body
 											.form-group.inline_field
 												.row
 													.col-sm-6
-														.form-group.inline_field.materialLabel
-																	.group
-																		input(type='text' required)
-																		label เลขหนังสือเดินทาง
+														select.selectpicker
+															option เลขบัตรประชาชน
+															option เลขหนังสือเดินทาง
+													.col-sm-6
+														input.form-control.material(type='text' required)
 
 											.row
 												.col-sm-12
